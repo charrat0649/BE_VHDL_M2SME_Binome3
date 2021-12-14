@@ -1,0 +1,5 @@
+#Tue Oct 05 11:31:33 CEST 2021
+newSoftwareExampleWizardPage.defaultLocation=F\:\\sopc_builder_tutorial\\software\\lights11
+newSoftwareExampleWizardPage.sopcinfoFile=F\:\\sopc_builder_tutorial\\nios_system.sopcinfo
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage2.newBspLocation=F\:\\sopc_builder_tutorial\\software\\lights11_bsp

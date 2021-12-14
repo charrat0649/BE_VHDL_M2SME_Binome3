@@ -1,0 +1,34 @@
+<kpt_db name="divis.map_bb" kpt_version="1.1">
+  <key_points_set type="reference" hier_sep="/">
+    <key_point id="1" type="register">
+      <name>clk1hz~reg0</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="2" type="register">
+      <name>cpt[0]</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="3" type="register">
+      <name>cpt[1]</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="4" type="register">
+      <name>clk1hz</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
+      </attributes_list>
+    </key_point>
+  </key_points_set>
+  <key_points_set type="transition" hier_sep="|">
+  </key_points_set>
+  <key_points_set type="transformed" hier_sep="|">
+  </key_points_set>
+  <transformations_set hier_sep="|">
+  </transformations_set>
+</kpt_db>

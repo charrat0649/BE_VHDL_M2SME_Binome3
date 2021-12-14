@@ -1,0 +1,497 @@
+Simulator report for gestion_anemometre
+Fri Sep 24 10:38:46 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 s       ;
+; Simulation Netlist Size     ; 201 nodes    ;
+; Simulation Coverage         ;      33.00 % ;
+; Total Number of Transitions ; 1802         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Functional    ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; Waveform3.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      33.00 % ;
+; Total nodes checked                                 ; 201          ;
+; Total output ports checked                          ; 200          ;
+; Total output ports with complete 1/0-value coverage ; 66           ;
+; Total output ports with no 1/0-value coverage       ; 133          ;
+; Total output ports with no 1-value coverage         ; 134          ;
+; Total output ports with no 0-value coverage         ; 133          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                              ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; Node Name                                         ; Output Port Name                                  ; Output Port Type ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+; |gestion_anemometre|internal_reset                ; |gestion_anemometre|internal_reset                ; pin_out          ;
+; |gestion_anemometre|clk_50M                       ; |gestion_anemometre|clk_50M                       ; out              ;
+; |gestion_anemometre|data_valid                    ; |gestion_anemometre|data_valid                    ; pin_out          ;
+; |gestion_anemometre|start_stop                    ; |gestion_anemometre|start_stop                    ; out              ;
+; |gestion_anemometre|in_freq_anemometre            ; |gestion_anemometre|in_freq_anemometre            ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_valid~0 ; |gestion_anemometre|choix_mode:inst4|data_valid~0 ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_valid   ; |gestion_anemometre|choix_mode:inst4|data_valid   ; regout           ;
+; |gestion_anemometre|div_frq_1hz:inst1|clk_1hz     ; |gestion_anemometre|div_frq_1hz:inst1|clk_1hz     ; regout           ;
+; |gestion_anemometre|div_frq_1hz:inst1|process_0~0 ; |gestion_anemometre|div_frq_1hz:inst1|process_0~0 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~0       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~0       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~1       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~1       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~2       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~2       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~3       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~3       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|clk_1hz~0   ; |gestion_anemometre|div_frq_1hz:inst1|clk_1hz~0   ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~4       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~4       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~5       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~5       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~6       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~6       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~7       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~7       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|clk_1hz~1   ; |gestion_anemometre|div_frq_1hz:inst1|clk_1hz~1   ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~8       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~8       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~9       ; |gestion_anemometre|div_frq_1hz:inst1|cpt~9       ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~10      ; |gestion_anemometre|div_frq_1hz:inst1|cpt~10      ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt~11      ; |gestion_anemometre|div_frq_1hz:inst1|cpt~11      ; out              ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt[0]      ; |gestion_anemometre|div_frq_1hz:inst1|cpt[0]      ; regout           ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt[1]      ; |gestion_anemometre|div_frq_1hz:inst1|cpt[1]      ; regout           ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt[2]      ; |gestion_anemometre|div_frq_1hz:inst1|cpt[2]      ; regout           ;
+; |gestion_anemometre|div_frq_1hz:inst1|cpt[3]      ; |gestion_anemometre|div_frq_1hz:inst1|cpt[3]      ; regout           ;
+; |gestion_anemometre|edge_detect:inst6|etat~0      ; |gestion_anemometre|edge_detect:inst6|etat~0      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~1      ; |gestion_anemometre|edge_detect:inst6|etat~1      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|reset~0     ; |gestion_anemometre|edge_detect:inst6|reset~0     ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~2      ; |gestion_anemometre|edge_detect:inst6|etat~2      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~3      ; |gestion_anemometre|edge_detect:inst6|etat~3      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|reset~1     ; |gestion_anemometre|edge_detect:inst6|reset~1     ; out              ;
+; |gestion_anemometre|edge_detect:inst6|reset       ; |gestion_anemometre|edge_detect:inst6|reset       ; regout           ;
+; |gestion_anemometre|edge_detect:inst6|etat~4      ; |gestion_anemometre|edge_detect:inst6|etat~4      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~5      ; |gestion_anemometre|edge_detect:inst6|etat~5      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|reset~2     ; |gestion_anemometre|edge_detect:inst6|reset~2     ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~6      ; |gestion_anemometre|edge_detect:inst6|etat~6      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~7      ; |gestion_anemometre|edge_detect:inst6|etat~7      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|reset~3     ; |gestion_anemometre|edge_detect:inst6|reset~3     ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~8      ; |gestion_anemometre|edge_detect:inst6|etat~8      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat~9      ; |gestion_anemometre|edge_detect:inst6|etat~9      ; out              ;
+; |gestion_anemometre|edge_detect:inst6|reset~4     ; |gestion_anemometre|edge_detect:inst6|reset~4     ; out              ;
+; |gestion_anemometre|edge_detect:inst6|etat[0]     ; |gestion_anemometre|edge_detect:inst6|etat[0]     ; regout           ;
+; |gestion_anemometre|edge_detect:inst6|etat[1]     ; |gestion_anemometre|edge_detect:inst6|etat[1]     ; regout           ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~0 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~0 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~1 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~1 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~2 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~2 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~3 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan0~3 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~0 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~0 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~1 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~1 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~2 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~2 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~3 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~3 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~4 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan1~4 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan2~0 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan2~0 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan2~1 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan2~1 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|LessThan2~2 ; |gestion_anemometre|div_frq_1hz:inst1|LessThan2~2 ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|Add0~0      ; |gestion_anemometre|div_frq_1hz:inst1|Add0~0      ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|Add0~1      ; |gestion_anemometre|div_frq_1hz:inst1|Add0~1      ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|Add0~2      ; |gestion_anemometre|div_frq_1hz:inst1|Add0~2      ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|Add0~3      ; |gestion_anemometre|div_frq_1hz:inst1|Add0~3      ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|Add0~4      ; |gestion_anemometre|div_frq_1hz:inst1|Add0~4      ; out0             ;
+; |gestion_anemometre|div_frq_1hz:inst1|Equal0~0    ; |gestion_anemometre|div_frq_1hz:inst1|Equal0~0    ; out0             ;
+; |gestion_anemometre|edge_detect:inst6|Equal0~0    ; |gestion_anemometre|edge_detect:inst6|Equal0~0    ; out0             ;
+; |gestion_anemometre|edge_detect:inst6|Equal1~0    ; |gestion_anemometre|edge_detect:inst6|Equal1~0    ; out0             ;
+; |gestion_anemometre|edge_detect:inst6|Equal2~0    ; |gestion_anemometre|edge_detect:inst6|Equal2~0    ; out0             ;
++---------------------------------------------------+---------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                         ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; Node Name                                                     ; Output Port Name                                              ; Output Port Type ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; |gestion_anemometre|continu                                   ; |gestion_anemometre|continu                                   ; out              ;
+; |gestion_anemometre|raz_n                                     ; |gestion_anemometre|raz_n                                     ; out              ;
+; |gestion_anemometre|data_anemometre[7]                        ; |gestion_anemometre|data_anemometre[7]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[6]                        ; |gestion_anemometre|data_anemometre[6]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[5]                        ; |gestion_anemometre|data_anemometre[5]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[4]                        ; |gestion_anemometre|data_anemometre[4]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[3]                        ; |gestion_anemometre|data_anemometre[3]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[2]                        ; |gestion_anemometre|data_anemometre[2]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[1]                        ; |gestion_anemometre|data_anemometre[1]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[0]                        ; |gestion_anemometre|data_anemometre[0]                        ; pin_out          ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[7] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[7] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[6] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[6] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[5] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[5] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[4] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[4] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[3] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[3] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[2] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[2] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[1] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[1] ; regout           ;
+; |gestion_anemometre|counter:inst|counter[7]                   ; |gestion_anemometre|counter:inst|counter[7]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[6]                   ; |gestion_anemometre|counter:inst|counter[6]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[5]                   ; |gestion_anemometre|counter:inst|counter[5]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[4]                   ; |gestion_anemometre|counter:inst|counter[4]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[3]                   ; |gestion_anemometre|counter:inst|counter[3]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[2]                   ; |gestion_anemometre|counter:inst|counter[2]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[1]                   ; |gestion_anemometre|counter:inst|counter[1]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[0]                   ; |gestion_anemometre|counter:inst|counter[0]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~0        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~0        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~1        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~1        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~2        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~2        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~3        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~3        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~4        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~4        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~5        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~5        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~6        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~6        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~7        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~7        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~0                    ; |gestion_anemometre|choix_mode:inst4|tmp~0                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~1                    ; |gestion_anemometre|choix_mode:inst4|tmp~1                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~2                    ; |gestion_anemometre|choix_mode:inst4|tmp~2                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~3                    ; |gestion_anemometre|choix_mode:inst4|tmp~3                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~4                    ; |gestion_anemometre|choix_mode:inst4|tmp~4                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~5                    ; |gestion_anemometre|choix_mode:inst4|tmp~5                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~6                    ; |gestion_anemometre|choix_mode:inst4|tmp~6                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~7                    ; |gestion_anemometre|choix_mode:inst4|tmp~7                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~0                   ; |gestion_anemometre|choix_mode:inst4|tmp1~0                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~1                   ; |gestion_anemometre|choix_mode:inst4|tmp1~1                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~2                   ; |gestion_anemometre|choix_mode:inst4|tmp1~2                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~3                   ; |gestion_anemometre|choix_mode:inst4|tmp1~3                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~4                   ; |gestion_anemometre|choix_mode:inst4|tmp1~4                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~5                   ; |gestion_anemometre|choix_mode:inst4|tmp1~5                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~6                   ; |gestion_anemometre|choix_mode:inst4|tmp1~6                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~7                   ; |gestion_anemometre|choix_mode:inst4|tmp1~7                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~8                    ; |gestion_anemometre|choix_mode:inst4|tmp~8                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~9                    ; |gestion_anemometre|choix_mode:inst4|tmp~9                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~10                   ; |gestion_anemometre|choix_mode:inst4|tmp~10                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~11                   ; |gestion_anemometre|choix_mode:inst4|tmp~11                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~12                   ; |gestion_anemometre|choix_mode:inst4|tmp~12                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~13                   ; |gestion_anemometre|choix_mode:inst4|tmp~13                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~14                   ; |gestion_anemometre|choix_mode:inst4|tmp~14                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~15                   ; |gestion_anemometre|choix_mode:inst4|tmp~15                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~8        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~8        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~9        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~9        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~10       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~10       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~11       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~11       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~12       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~12       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~13       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~13       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~14       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~14       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~15       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~15       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~8                   ; |gestion_anemometre|choix_mode:inst4|tmp1~8                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~9                   ; |gestion_anemometre|choix_mode:inst4|tmp1~9                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~10                  ; |gestion_anemometre|choix_mode:inst4|tmp1~10                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~11                  ; |gestion_anemometre|choix_mode:inst4|tmp1~11                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~12                  ; |gestion_anemometre|choix_mode:inst4|tmp1~12                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~13                  ; |gestion_anemometre|choix_mode:inst4|tmp1~13                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~14                  ; |gestion_anemometre|choix_mode:inst4|tmp1~14                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~15                  ; |gestion_anemometre|choix_mode:inst4|tmp1~15                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~16                   ; |gestion_anemometre|choix_mode:inst4|tmp~16                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~17                   ; |gestion_anemometre|choix_mode:inst4|tmp~17                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~18                   ; |gestion_anemometre|choix_mode:inst4|tmp~18                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~19                   ; |gestion_anemometre|choix_mode:inst4|tmp~19                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~20                   ; |gestion_anemometre|choix_mode:inst4|tmp~20                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~21                   ; |gestion_anemometre|choix_mode:inst4|tmp~21                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~22                   ; |gestion_anemometre|choix_mode:inst4|tmp~22                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~23                   ; |gestion_anemometre|choix_mode:inst4|tmp~23                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~16       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~16       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~17       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~17       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~18       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~18       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~19       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~19       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~20       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~20       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~21       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~21       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~22       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~22       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~23       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~23       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~24                   ; |gestion_anemometre|choix_mode:inst4|tmp~24                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~25                   ; |gestion_anemometre|choix_mode:inst4|tmp~25                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~26                   ; |gestion_anemometre|choix_mode:inst4|tmp~26                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~27                   ; |gestion_anemometre|choix_mode:inst4|tmp~27                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~28                   ; |gestion_anemometre|choix_mode:inst4|tmp~28                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~29                   ; |gestion_anemometre|choix_mode:inst4|tmp~29                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~30                   ; |gestion_anemometre|choix_mode:inst4|tmp~30                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~31                   ; |gestion_anemometre|choix_mode:inst4|tmp~31                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[0]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[0]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[1]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[1]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[2]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[2]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[3]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[3]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[4]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[4]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[5]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[5]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[6]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[6]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[7]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[7]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[0]                   ; |gestion_anemometre|choix_mode:inst4|tmp[0]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[1]                   ; |gestion_anemometre|choix_mode:inst4|tmp[1]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[2]                   ; |gestion_anemometre|choix_mode:inst4|tmp[2]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[3]                   ; |gestion_anemometre|choix_mode:inst4|tmp[3]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[4]                   ; |gestion_anemometre|choix_mode:inst4|tmp[4]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[5]                   ; |gestion_anemometre|choix_mode:inst4|tmp[5]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[6]                   ; |gestion_anemometre|choix_mode:inst4|tmp[6]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[7]                   ; |gestion_anemometre|choix_mode:inst4|tmp[7]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[0]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[0]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[1]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[1]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[2]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[2]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[3]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[3]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[4]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[4]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[5]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[5]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[6]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[6]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[7]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[7]       ; regout           ;
+; |gestion_anemometre|counter:inst|Add0~0                       ; |gestion_anemometre|counter:inst|Add0~0                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~1                       ; |gestion_anemometre|counter:inst|Add0~1                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~2                       ; |gestion_anemometre|counter:inst|Add0~2                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~3                       ; |gestion_anemometre|counter:inst|Add0~3                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~4                       ; |gestion_anemometre|counter:inst|Add0~4                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~5                       ; |gestion_anemometre|counter:inst|Add0~5                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~6                       ; |gestion_anemometre|counter:inst|Add0~6                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~7                       ; |gestion_anemometre|counter:inst|Add0~7                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~8                       ; |gestion_anemometre|counter:inst|Add0~8                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~9                       ; |gestion_anemometre|counter:inst|Add0~9                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~10                      ; |gestion_anemometre|counter:inst|Add0~10                      ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~11                      ; |gestion_anemometre|counter:inst|Add0~11                      ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~12                      ; |gestion_anemometre|counter:inst|Add0~12                      ; out0             ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                         ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; Node Name                                                     ; Output Port Name                                              ; Output Port Type ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+; |gestion_anemometre|raz_n                                     ; |gestion_anemometre|raz_n                                     ; out              ;
+; |gestion_anemometre|data_anemometre[7]                        ; |gestion_anemometre|data_anemometre[7]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[6]                        ; |gestion_anemometre|data_anemometre[6]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[5]                        ; |gestion_anemometre|data_anemometre[5]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[4]                        ; |gestion_anemometre|data_anemometre[4]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[3]                        ; |gestion_anemometre|data_anemometre[3]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[2]                        ; |gestion_anemometre|data_anemometre[2]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[1]                        ; |gestion_anemometre|data_anemometre[1]                        ; pin_out          ;
+; |gestion_anemometre|data_anemometre[0]                        ; |gestion_anemometre|data_anemometre[0]                        ; pin_out          ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[7] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[7] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[6] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[6] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[5] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[5] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[4] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[4] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[3] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[3] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[2] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[2] ; regout           ;
+; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[1] ; |gestion_anemometre|counter:inst|\p_asynchronous_reset:cpt[1] ; regout           ;
+; |gestion_anemometre|counter:inst|counter[7]                   ; |gestion_anemometre|counter:inst|counter[7]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[6]                   ; |gestion_anemometre|counter:inst|counter[6]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[5]                   ; |gestion_anemometre|counter:inst|counter[5]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[4]                   ; |gestion_anemometre|counter:inst|counter[4]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[3]                   ; |gestion_anemometre|counter:inst|counter[3]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[2]                   ; |gestion_anemometre|counter:inst|counter[2]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[1]                   ; |gestion_anemometre|counter:inst|counter[1]                   ; regout           ;
+; |gestion_anemometre|counter:inst|counter[0]                   ; |gestion_anemometre|counter:inst|counter[0]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~0        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~0        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~1        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~1        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~2        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~2        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~3        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~3        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~4        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~4        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~5        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~5        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~6        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~6        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~7        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~7        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~0                    ; |gestion_anemometre|choix_mode:inst4|tmp~0                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~1                    ; |gestion_anemometre|choix_mode:inst4|tmp~1                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~2                    ; |gestion_anemometre|choix_mode:inst4|tmp~2                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~3                    ; |gestion_anemometre|choix_mode:inst4|tmp~3                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~4                    ; |gestion_anemometre|choix_mode:inst4|tmp~4                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~5                    ; |gestion_anemometre|choix_mode:inst4|tmp~5                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~6                    ; |gestion_anemometre|choix_mode:inst4|tmp~6                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~7                    ; |gestion_anemometre|choix_mode:inst4|tmp~7                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~0                   ; |gestion_anemometre|choix_mode:inst4|tmp1~0                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~1                   ; |gestion_anemometre|choix_mode:inst4|tmp1~1                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~2                   ; |gestion_anemometre|choix_mode:inst4|tmp1~2                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~3                   ; |gestion_anemometre|choix_mode:inst4|tmp1~3                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~4                   ; |gestion_anemometre|choix_mode:inst4|tmp1~4                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~5                   ; |gestion_anemometre|choix_mode:inst4|tmp1~5                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~6                   ; |gestion_anemometre|choix_mode:inst4|tmp1~6                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~7                   ; |gestion_anemometre|choix_mode:inst4|tmp1~7                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~8                    ; |gestion_anemometre|choix_mode:inst4|tmp~8                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~9                    ; |gestion_anemometre|choix_mode:inst4|tmp~9                    ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~10                   ; |gestion_anemometre|choix_mode:inst4|tmp~10                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~11                   ; |gestion_anemometre|choix_mode:inst4|tmp~11                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~12                   ; |gestion_anemometre|choix_mode:inst4|tmp~12                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~13                   ; |gestion_anemometre|choix_mode:inst4|tmp~13                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~14                   ; |gestion_anemometre|choix_mode:inst4|tmp~14                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~15                   ; |gestion_anemometre|choix_mode:inst4|tmp~15                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~8        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~8        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~9        ; |gestion_anemometre|choix_mode:inst4|data_anemometre~9        ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~10       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~10       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~11       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~11       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~12       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~12       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~13       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~13       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~14       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~14       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~15       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~15       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~8                   ; |gestion_anemometre|choix_mode:inst4|tmp1~8                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~9                   ; |gestion_anemometre|choix_mode:inst4|tmp1~9                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~10                  ; |gestion_anemometre|choix_mode:inst4|tmp1~10                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~11                  ; |gestion_anemometre|choix_mode:inst4|tmp1~11                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~12                  ; |gestion_anemometre|choix_mode:inst4|tmp1~12                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~13                  ; |gestion_anemometre|choix_mode:inst4|tmp1~13                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~14                  ; |gestion_anemometre|choix_mode:inst4|tmp1~14                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1~15                  ; |gestion_anemometre|choix_mode:inst4|tmp1~15                  ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~16                   ; |gestion_anemometre|choix_mode:inst4|tmp~16                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~17                   ; |gestion_anemometre|choix_mode:inst4|tmp~17                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~18                   ; |gestion_anemometre|choix_mode:inst4|tmp~18                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~19                   ; |gestion_anemometre|choix_mode:inst4|tmp~19                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~20                   ; |gestion_anemometre|choix_mode:inst4|tmp~20                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~21                   ; |gestion_anemometre|choix_mode:inst4|tmp~21                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~22                   ; |gestion_anemometre|choix_mode:inst4|tmp~22                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~23                   ; |gestion_anemometre|choix_mode:inst4|tmp~23                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~16       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~16       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~17       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~17       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~18       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~18       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~19       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~19       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~20       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~20       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~21       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~21       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~22       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~22       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre~23       ; |gestion_anemometre|choix_mode:inst4|data_anemometre~23       ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~24                   ; |gestion_anemometre|choix_mode:inst4|tmp~24                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~25                   ; |gestion_anemometre|choix_mode:inst4|tmp~25                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~26                   ; |gestion_anemometre|choix_mode:inst4|tmp~26                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~27                   ; |gestion_anemometre|choix_mode:inst4|tmp~27                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~28                   ; |gestion_anemometre|choix_mode:inst4|tmp~28                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~29                   ; |gestion_anemometre|choix_mode:inst4|tmp~29                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~30                   ; |gestion_anemometre|choix_mode:inst4|tmp~30                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp~31                   ; |gestion_anemometre|choix_mode:inst4|tmp~31                   ; out              ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[0]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[0]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[1]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[1]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[2]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[2]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[3]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[3]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[4]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[4]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[5]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[5]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[6]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[6]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp1[7]                  ; |gestion_anemometre|choix_mode:inst4|tmp1[7]                  ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[0]                   ; |gestion_anemometre|choix_mode:inst4|tmp[0]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[1]                   ; |gestion_anemometre|choix_mode:inst4|tmp[1]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[2]                   ; |gestion_anemometre|choix_mode:inst4|tmp[2]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[3]                   ; |gestion_anemometre|choix_mode:inst4|tmp[3]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[4]                   ; |gestion_anemometre|choix_mode:inst4|tmp[4]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[5]                   ; |gestion_anemometre|choix_mode:inst4|tmp[5]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[6]                   ; |gestion_anemometre|choix_mode:inst4|tmp[6]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|tmp[7]                   ; |gestion_anemometre|choix_mode:inst4|tmp[7]                   ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[0]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[0]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[1]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[1]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[2]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[2]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[3]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[3]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[4]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[4]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[5]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[5]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[6]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[6]       ; regout           ;
+; |gestion_anemometre|choix_mode:inst4|data_anemometre[7]       ; |gestion_anemometre|choix_mode:inst4|data_anemometre[7]       ; regout           ;
+; |gestion_anemometre|counter:inst|Add0~0                       ; |gestion_anemometre|counter:inst|Add0~0                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~1                       ; |gestion_anemometre|counter:inst|Add0~1                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~2                       ; |gestion_anemometre|counter:inst|Add0~2                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~3                       ; |gestion_anemometre|counter:inst|Add0~3                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~4                       ; |gestion_anemometre|counter:inst|Add0~4                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~5                       ; |gestion_anemometre|counter:inst|Add0~5                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~6                       ; |gestion_anemometre|counter:inst|Add0~6                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~7                       ; |gestion_anemometre|counter:inst|Add0~7                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~8                       ; |gestion_anemometre|counter:inst|Add0~8                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~9                       ; |gestion_anemometre|counter:inst|Add0~9                       ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~10                      ; |gestion_anemometre|counter:inst|Add0~10                      ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~11                      ; |gestion_anemometre|counter:inst|Add0~11                      ; out0             ;
+; |gestion_anemometre|counter:inst|Add0~12                      ; |gestion_anemometre|counter:inst|Add0~12                      ; out0             ;
++---------------------------------------------------------------+---------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Sep 24 10:38:46 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off gestion_anemometre -c gestion_anemometre
+Info: Using vector source file "C:/Users/Etudiant/Documents/BE_CHARRAT_Q9/gestion_anemometre/Waveform3.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of Waveform3.vwf called gestion_anemometre.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      33.00 %
+Info: Number of transitions in simulation is 1802
+Info: Vector file Waveform3.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 150 megabytes
+    Info: Processing ended: Fri Sep 24 10:38:46 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

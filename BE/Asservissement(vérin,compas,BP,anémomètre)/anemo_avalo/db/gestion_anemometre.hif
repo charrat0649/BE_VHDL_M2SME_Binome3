@@ -1,0 +1,189 @@
+Quartus II
+Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+14
+1076
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+counter
+# storage
+db|gestion_anemometre.(1).cnf
+db|gestion_anemometre.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+9942d9616bbf1cae13901deb8c644253
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(counter)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+counter:b2v_inst
+}
+# macro_sequence
+
+# end
+# entity
+div_frq_1hz
+# storage
+db|gestion_anemometre.(2).cnf
+db|gestion_anemometre.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+div_frq_1hz.vhd
+c61866593f3c36d44a3c3a61b2074e3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+div_frq_1hz:b2v_inst1
+}
+# macro_sequence
+
+# end
+# entity
+choix_mode
+# storage
+db|gestion_anemometre.(3).cnf
+db|gestion_anemometre.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+choix_mode.vhd
+48da7fbf7245592787450dccc203489
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_anemometre)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+choix_mode:b2v_inst4
+}
+# macro_sequence
+
+# end
+# entity
+edge_detect
+# storage
+db|gestion_anemometre.(4).cnf
+db|gestion_anemometre.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+edge_detect.vhd
+fd4a8135a1046708244bd30c1d15f57
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+edge_detect:b2v_inst6
+}
+# macro_sequence
+
+# end
+# entity
+gestion_anemometre
+# storage
+db|gestion_anemometre.(0).cnf
+db|gestion_anemometre.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+gestion_anemometre.vhd
+dcfe463596acfc2653762ed449478d49
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

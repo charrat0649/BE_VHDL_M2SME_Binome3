@@ -1,0 +1,163 @@
+Quartus II
+Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+14
+1076
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+gestion_anemometre
+# storage
+db|gestion_anemometre.(0).cnf
+db|gestion_anemometre.(0).cnf
+# case_insensitive
+# source_file
+gestion_anemometre.bdf
+1174804af356597f84b897db950973e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+edge_detect
+# storage
+db|gestion_anemometre.(1).cnf
+db|gestion_anemometre.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+edge_detect.vhd
+fd4a8135a1046708244bd30c1d15f57
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+edge_detect:inst6
+}
+# macro_sequence
+
+# end
+# entity
+div_frq_1hz
+# storage
+db|gestion_anemometre.(2).cnf
+db|gestion_anemometre.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+div_frq_1hz.vhd
+7ca88ba6a859aba6ac7a92e2f399a58
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+div_frq_1hz:inst1
+}
+# macro_sequence
+
+# end
+# entity
+choix_mode
+# storage
+db|gestion_anemometre.(3).cnf
+db|gestion_anemometre.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+choix_mode.vhd
+fb3ed0d2a67f50a06fd39d698618fe0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+choix_mode:inst4
+}
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|gestion_anemometre.(4).cnf
+db|gestion_anemometre.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+9942d9616bbf1cae13901deb8c644253
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+counter:inst
+}
+# macro_sequence
+
+# end
+# complete
+

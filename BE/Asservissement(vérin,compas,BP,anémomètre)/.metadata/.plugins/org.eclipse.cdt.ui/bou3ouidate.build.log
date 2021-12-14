@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project bou3ouidate ****
+
+make all 
+Info: Building ../bou3ouidate_bsp/
+make --no-print-directory -C ../bou3ouidate_bsp/
+[BSP build complete]
+[bou3ouidate build complete]

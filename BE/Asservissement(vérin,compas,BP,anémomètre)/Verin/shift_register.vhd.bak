@@ -1,0 +1,34 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity shift_register is
+	port(
+		clk_1mhz, sig, cs_n : in std_logic;
+		reg : out std_logic_vector (11 downto 0));
+end shift_register;
+
+architecture arc of shift_register is
+	Signal shift_register, out_register : std_logic_vector (11 downto 0);
+begin 
+
+process(clk_1mhz) is
+
+begin	
+
+	if(clk_1mhz'event and clk_1mhz='1') then
+		shift_register (11 downto 1) <= shift_register (10 downto 0);
+		shift_register (0) <= sig;
+	end if;
+end process;
+
+
+process (cs_n)
+
+begin
+	if cs_n = '1' then 
+		reg <= shift_register;
+	end if;
+end process;
+
+end arc;

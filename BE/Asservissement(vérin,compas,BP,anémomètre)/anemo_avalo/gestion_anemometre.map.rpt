@@ -1,0 +1,362 @@
+Analysis & Synthesis report for gestion_anemometre
+Tue Oct 05 11:32:02 2021
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 05 11:32:02 2021         ;
+; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition ;
+; Revision Name                      ; gestion_anemometre                            ;
+; Top-level Entity Name              ; gestion_anemometre                            ;
+; Family                             ; Cyclone II                                    ;
+; Total logic elements               ; 104                                           ;
+;     Total combinational functions  ; 90                                            ;
+;     Dedicated logic registers      ; 68                                            ;
+; Total registers                    ; 68                                            ;
+; Total pins                         ; 72                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; gestion_anemometre ; gestion_anemometre ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; Off                ; Off                ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+
+; gestion_anemometre.vhd           ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/lol/sopc_BB/anemo_avalo/gestion_anemometre.vhd ;
+; counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/lol/sopc_BB/anemo_avalo/counter.vhd            ;
+; edge_detect.vhd                  ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/lol/sopc_BB/anemo_avalo/edge_detect.vhd        ;
+; div_frq_1hz.vhd                  ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/lol/sopc_BB/anemo_avalo/div_frq_1hz.vhd        ;
+; choix_mode.vhd                   ; yes             ; User VHDL File  ; C:/Users/Etudiant/Desktop/lol/sopc_BB/anemo_avalo/choix_mode.vhd         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 104   ;
+;                                             ;       ;
+; Total combinational functions               ; 90    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 17    ;
+;     -- 3 input functions                    ; 23    ;
+;     -- <=2 input functions                  ; 50    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 59    ;
+;     -- arithmetic mode                      ; 31    ;
+;                                             ;       ;
+; Total registers                             ; 68    ;
+;     -- Dedicated logic registers            ; 68    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 72    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 60    ;
+; Total fan-out                               ; 418   ;
+; Average fan-out                             ; 1.82  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+; |gestion_anemometre        ; 90 (2)            ; 68 (6)       ; 0           ; 0            ; 0       ; 0         ; 72   ; 0            ; |gestion_anemometre                       ;              ;
+;    |choix_mode:b2v_inst4|  ; 20 (20)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gestion_anemometre|choix_mode:b2v_inst4  ;              ;
+;    |counter:b2v_inst|      ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gestion_anemometre|counter:b2v_inst      ;              ;
+;    |div_frq_1hz:b2v_inst1| ; 58 (58)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gestion_anemometre|div_frq_1hz:b2v_inst1 ;              ;
+;    |edge_detect:b2v_inst6| ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |gestion_anemometre|edge_detect:b2v_inst6 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++---------------------------------------+-----------------------------------------------------------+
+; Register name                         ; Reason for Removal                                        ;
++---------------------------------------+-----------------------------------------------------------+
+; edge_detect:b2v_inst6|etat[0]         ; Merged with edge_detect:b2v_inst6|reset                   ;
+; counter:b2v_inst|counter[7]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[7] ;
+; counter:b2v_inst|counter[6]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[6] ;
+; counter:b2v_inst|counter[5]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[5] ;
+; counter:b2v_inst|counter[4]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[4] ;
+; counter:b2v_inst|counter[3]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[3] ;
+; counter:b2v_inst|counter[2]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[2] ;
+; counter:b2v_inst|counter[1]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[1] ;
+; counter:b2v_inst|counter[0]           ; Merged with counter:b2v_inst|\p_asynchronous_reset:cpt[0] ;
+; Total Number of Removed Registers = 9 ;                                                           ;
++---------------------------------------+-----------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 68    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                  ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------+----------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |gestion_anemometre|choix_mode:b2v_inst4|data_anemometre[0] ;                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |gestion_anemometre|edge_detect:b2v_inst6|etat[1]           ;                            ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; |gestion_anemometre|div_frq_1hz:b2v_inst1|cpt[8]            ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |gestion_anemometre|choix_mode:b2v_inst4|tmp[0]             ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 05 11:32:01 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gestion_anemometre -c gestion_anemometre
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Found 2 design units, including 1 entities, in source file gestion_anemometre.vhd
+    Info: Found design unit 1: gestion_anemometre-bdf_type
+    Info: Found entity 1: gestion_anemometre
+Info: Found 2 design units, including 1 entities, in source file counter.vhd
+    Info: Found design unit 1: counter-arc
+    Info: Found entity 1: counter
+Info: Found 2 design units, including 1 entities, in source file edge_detect.vhd
+    Info: Found design unit 1: edge_detect-arc
+    Info: Found entity 1: edge_detect
+Info: Found 2 design units, including 1 entities, in source file div_frq_1hz.vhd
+    Info: Found design unit 1: div_frq_1hz-bhv
+    Info: Found entity 1: div_frq_1hz
+Info: Found 2 design units, including 1 entities, in source file choix_mode.vhd
+    Info: Found design unit 1: choix_mode-bhv
+    Info: Found entity 1: choix_mode
+Info: Elaborating entity "gestion_anemometre" for the top level hierarchy
+Info: Elaborating entity "counter" for hierarchy "counter:b2v_inst"
+Info: Elaborating entity "div_frq_1hz" for hierarchy "div_frq_1hz:b2v_inst1"
+Info: Elaborating entity "choix_mode" for hierarchy "choix_mode:b2v_inst4"
+Info: Elaborating entity "edge_detect" for hierarchy "edge_detect:b2v_inst6"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "readdata[8]" is stuck at GND
+    Warning (13410): Pin "readdata[10]" is stuck at GND
+    Warning (13410): Pin "readdata[11]" is stuck at GND
+    Warning (13410): Pin "readdata[12]" is stuck at GND
+    Warning (13410): Pin "readdata[13]" is stuck at GND
+    Warning (13410): Pin "readdata[14]" is stuck at GND
+    Warning (13410): Pin "readdata[15]" is stuck at GND
+    Warning (13410): Pin "readdata[16]" is stuck at GND
+    Warning (13410): Pin "readdata[17]" is stuck at GND
+    Warning (13410): Pin "readdata[18]" is stuck at GND
+    Warning (13410): Pin "readdata[19]" is stuck at GND
+    Warning (13410): Pin "readdata[20]" is stuck at GND
+    Warning (13410): Pin "readdata[21]" is stuck at GND
+    Warning (13410): Pin "readdata[22]" is stuck at GND
+    Warning (13410): Pin "readdata[23]" is stuck at GND
+    Warning (13410): Pin "readdata[24]" is stuck at GND
+    Warning (13410): Pin "readdata[25]" is stuck at GND
+    Warning (13410): Pin "readdata[26]" is stuck at GND
+    Warning (13410): Pin "readdata[27]" is stuck at GND
+    Warning (13410): Pin "readdata[28]" is stuck at GND
+    Warning (13410): Pin "readdata[29]" is stuck at GND
+    Warning (13410): Pin "readdata[30]" is stuck at GND
+    Warning (13410): Pin "readdata[31]" is stuck at GND
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Warning: Design contains 31 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "writedata[3]"
+    Warning (15610): No output dependent on input pin "writedata[4]"
+    Warning (15610): No output dependent on input pin "writedata[5]"
+    Warning (15610): No output dependent on input pin "writedata[6]"
+    Warning (15610): No output dependent on input pin "writedata[7]"
+    Warning (15610): No output dependent on input pin "writedata[8]"
+    Warning (15610): No output dependent on input pin "writedata[9]"
+    Warning (15610): No output dependent on input pin "writedata[10]"
+    Warning (15610): No output dependent on input pin "writedata[11]"
+    Warning (15610): No output dependent on input pin "writedata[12]"
+    Warning (15610): No output dependent on input pin "writedata[13]"
+    Warning (15610): No output dependent on input pin "writedata[14]"
+    Warning (15610): No output dependent on input pin "writedata[15]"
+    Warning (15610): No output dependent on input pin "writedata[16]"
+    Warning (15610): No output dependent on input pin "writedata[17]"
+    Warning (15610): No output dependent on input pin "writedata[18]"
+    Warning (15610): No output dependent on input pin "writedata[19]"
+    Warning (15610): No output dependent on input pin "writedata[20]"
+    Warning (15610): No output dependent on input pin "writedata[21]"
+    Warning (15610): No output dependent on input pin "writedata[22]"
+    Warning (15610): No output dependent on input pin "writedata[23]"
+    Warning (15610): No output dependent on input pin "writedata[24]"
+    Warning (15610): No output dependent on input pin "writedata[25]"
+    Warning (15610): No output dependent on input pin "writedata[26]"
+    Warning (15610): No output dependent on input pin "writedata[27]"
+    Warning (15610): No output dependent on input pin "writedata[28]"
+    Warning (15610): No output dependent on input pin "writedata[29]"
+    Warning (15610): No output dependent on input pin "writedata[30]"
+    Warning (15610): No output dependent on input pin "writedata[31]"
+    Warning (15610): No output dependent on input pin "address[0]"
+    Warning (15610): No output dependent on input pin "address[1]"
+Info: Implemented 190 device resources after synthesis - the final resource count might be different
+    Info: Implemented 39 input pins
+    Info: Implemented 33 output pins
+    Info: Implemented 118 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 291 megabytes
+    Info: Processing ended: Tue Oct 05 11:32:02 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

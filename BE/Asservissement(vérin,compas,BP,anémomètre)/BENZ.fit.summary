@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Dec 03 08:43:38 2021
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Web Edition
+Revision Name : BENZ
+Top-level Entity Name : BENZ
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 2,297 / 22,320 ( 10 % )
+    Total combinational functions : 2,098 / 22,320 ( 9 % )
+    Dedicated logic registers : 1,130 / 22,320 ( 5 % )
+Total registers : 1130
+Total pins : 26 / 154 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 171,264 / 608,256 ( 28 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

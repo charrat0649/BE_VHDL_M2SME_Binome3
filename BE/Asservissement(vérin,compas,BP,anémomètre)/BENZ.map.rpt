@@ -1,0 +1,655 @@
+Analysis & Synthesis report for BENZ
+Tue Dec 14 18:14:32 2021
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Tue Dec 14 18:14:32 2021             ;
+; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
+; Revision Name                      ; BENZ                                          ;
+; Top-level Entity Name              ; BENZ                                          ;
+; Family                             ; Cyclone IV E                                  ;
+; Total logic elements               ; N/A until Partition Merge                     ;
+;     Total combinational functions  ; N/A until Partition Merge                     ;
+;     Dedicated logic registers      ; N/A until Partition Merge                     ;
+; Total registers                    ; N/A until Partition Merge                     ;
+; Total pins                         ; N/A until Partition Merge                     ;
+; Total virtual pins                 ; N/A until Partition Merge                     ;
+; Total memory bits                  ; N/A until Partition Merge                     ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                     ;
+; Total PLLs                         ; N/A until Partition Merge                     ;
++------------------------------------+-----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                                      ; BENZ               ; BENZ               ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Dec 14 18:14:26 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BENZ -c BENZ
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file verin/shift_register.vhd
+    Info (12022): Found design unit 1: shift_register-behavioral
+    Info (12023): Found entity 1: shift_register
+Info (12021): Found 2 design units, including 1 entities, in source file verin/pwm_nano.vhd
+    Info (12022): Found design unit 1: pwm_nano-arch_pwm_nano
+    Info (12023): Found entity 1: pwm_nano
+Info (12021): Found 2 design units, including 1 entities, in source file verin/interface_avalon.vhd
+    Info (12022): Found design unit 1: interface_avalon-bhv
+    Info (12023): Found entity 1: interface_avalon
+Info (12021): Found 2 design units, including 1 entities, in source file verin/div_frq_1mhz.vhd
+    Info (12022): Found design unit 1: div_frq_1Mhz-bhv
+    Info (12023): Found entity 1: div_frq_1Mhz
+Info (12021): Found 2 design units, including 1 entities, in source file verin/cs_n_generator.vhd
+    Info (12022): Found design unit 1: cs_n_generator-arc
+    Info (12023): Found entity 1: cs_n_generator
+Info (12021): Found 2 design units, including 1 entities, in source file verin/control_butee.vhd
+    Info (12022): Found design unit 1: control_butee-arch
+    Info (12023): Found entity 1: control_butee
+Info (12021): Found 1 design units, including 1 entities, in source file benz.bdf
+    Info (12023): Found entity 1: BENZ
+Info (12021): Found 2 design units, including 1 entities, in source file avalon_pwm.vhd
+    Info (12022): Found design unit 1: avalon_pwm-arch_avalon_pwm
+    Info (12023): Found entity 1: avalon_pwm
+Info (12021): Found 2 design units, including 1 entities, in source file avalon_pwm_0.vhd
+    Info (12022): Found design unit 1: avalon_pwm_0-rtl
+    Info (12023): Found entity 1: avalon_pwm_0
+Info (12021): Found 2 design units, including 1 entities, in source file anemo_avalo/gestion_anemometre.vhd
+    Info (12022): Found design unit 1: gestion_anemometre-bdf_type
+    Info (12023): Found entity 1: gestion_anemometre
+Info (12021): Found 2 design units, including 1 entities, in source file gestion_anemometre_0.vhd
+    Info (12022): Found design unit 1: gestion_anemometre_0-rtl
+    Info (12023): Found entity 1: gestion_anemometre_0
+Info (12021): Found 2 design units, including 1 entities, in source file verin/verin_test.vhd
+    Info (12022): Found design unit 1: verin_test-bdf_type
+    Info (12023): Found entity 1: verin_test
+Info (12021): Found 2 design units, including 1 entities, in source file verin_test_0.vhd
+    Info (12022): Found design unit 1: verin_test_0-rtl
+    Info (12023): Found entity 1: verin_test_0
+Info (12021): Found 2 design units, including 1 entities, in source file avalon_compas.vhd
+    Info (12022): Found design unit 1: avalon_compas-arch_avalon_compas
+    Info (12023): Found entity 1: avalon_compas
+Info (12021): Found 2 design units, including 1 entities, in source file avalon_compas_0.vhd
+    Info (12022): Found design unit 1: avalon_compas_0-rtl
+    Info (12023): Found entity 1: avalon_compas_0
+Info (12021): Found 2 design units, including 1 entities, in source file avalon_gestion_bp.vhd
+    Info (12022): Found design unit 1: avalon_gestion_bp-arch_avalon_gestion_bp
+    Info (12023): Found entity 1: avalon_gestion_bp
+Info (12021): Found 2 design units, including 1 entities, in source file avalon_gestion_bp_0.vhd
+    Info (12022): Found design unit 1: avalon_gestion_bp_0-rtl
+    Info (12023): Found entity 1: avalon_gestion_bp_0
+Warning (12019): Can't analyze file -- file E:/fichiers_vhd/avalon_txd.vhd is missing
+Warning (12019): Can't analyze file -- file avalon_txd_0.vhd is missing
+Info (12127): Elaborating entity "BENZ" for the top level hierarchy
+Warning (12125): Using design file ramzi.vhd, which is not specified as a design file for the current project, but contains definitions for 32 design units and 16 entities in project
+    Info (12022): Found design unit 1: avalon_compas_0_avalon_slave_0_arbitrator-europa
+    Info (12022): Found design unit 2: avalon_gestion_bp_0_avalon_slave_0_arbitrator-europa
+    Info (12022): Found design unit 3: avalon_pwm_0_avalon_slave_0_arbitrator-europa
+    Info (12022): Found design unit 4: avalon_txd_0_avalon_slave_0_arbitrator-europa
+    Info (12022): Found design unit 5: cpu_0_jtag_debug_module_arbitrator-europa
+    Info (12022): Found design unit 6: cpu_0_data_master_arbitrator-europa
+    Info (12022): Found design unit 7: cpu_0_instruction_master_arbitrator-europa
+    Info (12022): Found design unit 8: entree_s1_arbitrator-europa
+    Info (12022): Found design unit 9: gestion_anemometre_0_avalon_slave_0_arbitrator-europa
+    Info (12022): Found design unit 10: jtag_uart_0_avalon_jtag_slave_arbitrator-europa
+    Info (12022): Found design unit 11: onchip_memory2_0_s1_arbitrator-europa
+    Info (12022): Found design unit 12: sortie_s1_arbitrator-europa
+    Info (12022): Found design unit 13: sysid_control_slave_arbitrator-europa
+    Info (12022): Found design unit 14: verin_test_0_avalon_slave_0_arbitrator-europa
+    Info (12022): Found design unit 15: RAMZI_reset_clk_0_domain_synch_module-europa
+    Info (12022): Found design unit 16: RAMZI-europa
+    Info (12023): Found entity 1: avalon_compas_0_avalon_slave_0_arbitrator
+    Info (12023): Found entity 2: avalon_gestion_bp_0_avalon_slave_0_arbitrator
+    Info (12023): Found entity 3: avalon_pwm_0_avalon_slave_0_arbitrator
+    Info (12023): Found entity 4: avalon_txd_0_avalon_slave_0_arbitrator
+    Info (12023): Found entity 5: cpu_0_jtag_debug_module_arbitrator
+    Info (12023): Found entity 6: cpu_0_data_master_arbitrator
+    Info (12023): Found entity 7: cpu_0_instruction_master_arbitrator
+    Info (12023): Found entity 8: entree_s1_arbitrator
+    Info (12023): Found entity 9: gestion_anemometre_0_avalon_slave_0_arbitrator
+    Info (12023): Found entity 10: jtag_uart_0_avalon_jtag_slave_arbitrator
+    Info (12023): Found entity 11: onchip_memory2_0_s1_arbitrator
+    Info (12023): Found entity 12: sortie_s1_arbitrator
+    Info (12023): Found entity 13: sysid_control_slave_arbitrator
+    Info (12023): Found entity 14: verin_test_0_avalon_slave_0_arbitrator
+    Info (12023): Found entity 15: RAMZI_reset_clk_0_domain_synch_module
+    Info (12023): Found entity 16: RAMZI
+Info (12128): Elaborating entity "RAMZI" for hierarchy "RAMZI:inst"
+Info (12128): Elaborating entity "avalon_compas_0_avalon_slave_0_arbitrator" for hierarchy "RAMZI:inst|avalon_compas_0_avalon_slave_0_arbitrator:the_avalon_compas_0_avalon_slave_0"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(52): used implicit default value for signal "cpu_0_data_master_read_data_valid_avalon_compas_0_avalon_slave_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "avalon_compas_0" for hierarchy "RAMZI:inst|avalon_compas_0:the_avalon_compas_0"
+Info (12128): Elaborating entity "avalon_compas" for hierarchy "RAMZI:inst|avalon_compas_0:the_avalon_compas_0|avalon_compas:avalon_compas_0"
+Info (12128): Elaborating entity "avalon_gestion_bp_0_avalon_slave_0_arbitrator" for hierarchy "RAMZI:inst|avalon_gestion_bp_0_avalon_slave_0_arbitrator:the_avalon_gestion_bp_0_avalon_slave_0"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(287): used implicit default value for signal "cpu_0_data_master_read_data_valid_avalon_gestion_bp_0_avalon_slave_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "avalon_gestion_bp_0" for hierarchy "RAMZI:inst|avalon_gestion_bp_0:the_avalon_gestion_bp_0"
+Info (12128): Elaborating entity "avalon_gestion_bp" for hierarchy "RAMZI:inst|avalon_gestion_bp_0:the_avalon_gestion_bp_0|avalon_gestion_bp:avalon_gestion_bp_0"
+Warning (10492): VHDL Process Statement warning at avalon_gestion_bp.vhd(275): signal "rst_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at avalon_gestion_bp.vhd(277): signal "codeFonction" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at avalon_gestion_bp.vhd(271): inferring latch(es) for signal or variable "readdata", which holds its previous value in one or more paths through the process
+Warning (10873): Using initial value X (don't care) for net "readdata[31..4]" at avalon_gestion_bp.vhd(29)
+Info (10041): Inferred latch for "readdata[1]" at avalon_gestion_bp.vhd(271)
+Info (10041): Inferred latch for "readdata[2]" at avalon_gestion_bp.vhd(271)
+Info (10041): Inferred latch for "readdata[3]" at avalon_gestion_bp.vhd(271)
+Info (12128): Elaborating entity "avalon_pwm_0_avalon_slave_0_arbitrator" for hierarchy "RAMZI:inst|avalon_pwm_0_avalon_slave_0_arbitrator:the_avalon_pwm_0_avalon_slave_0"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(522): used implicit default value for signal "cpu_0_data_master_read_data_valid_avalon_pwm_0_avalon_slave_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "avalon_pwm_0" for hierarchy "RAMZI:inst|avalon_pwm_0:the_avalon_pwm_0"
+Info (12128): Elaborating entity "avalon_pwm" for hierarchy "RAMZI:inst|avalon_pwm_0:the_avalon_pwm_0|avalon_pwm:avalon_pwm_0"
+Warning (10492): VHDL Process Statement warning at avalon_pwm.vhd(24): signal "control" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at avalon_pwm.vhd(39): signal "control" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "avalon_txd_0_avalon_slave_0_arbitrator" for hierarchy "RAMZI:inst|avalon_txd_0_avalon_slave_0_arbitrator:the_avalon_txd_0_avalon_slave_0"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(755): used implicit default value for signal "cpu_0_data_master_read_data_valid_avalon_txd_0_avalon_slave_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "cpu_0_jtag_debug_module_arbitrator" for hierarchy "RAMZI:inst|cpu_0_jtag_debug_module_arbitrator:the_cpu_0_jtag_debug_module"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(990): used implicit default value for signal "cpu_0_data_master_read_data_valid_cpu_0_jtag_debug_module" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(994): used implicit default value for signal "cpu_0_instruction_master_read_data_valid_cpu_0_jtag_debug_module" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "cpu_0_data_master_arbitrator" for hierarchy "RAMZI:inst|cpu_0_data_master_arbitrator:the_cpu_0_data_master"
+Info (12128): Elaborating entity "cpu_0_instruction_master_arbitrator" for hierarchy "RAMZI:inst|cpu_0_instruction_master_arbitrator:the_cpu_0_instruction_master"
+Warning (12125): Using design file cpu_0.vhd, which is not specified as a design file for the current project, but contains definitions for 44 design units and 22 entities in project
+    Info (12022): Found design unit 1: cpu_0_register_bank_a_module-europa
+    Info (12022): Found design unit 2: cpu_0_register_bank_b_module-europa
+    Info (12022): Found design unit 3: cpu_0_nios2_oci_debug-europa
+    Info (12022): Found design unit 4: cpu_0_ociram_lpm_dram_bdp_component_module-europa
+    Info (12022): Found design unit 5: cpu_0_nios2_ocimem-europa
+    Info (12022): Found design unit 6: cpu_0_nios2_avalon_reg-europa
+    Info (12022): Found design unit 7: cpu_0_nios2_oci_break-europa
+    Info (12022): Found design unit 8: cpu_0_nios2_oci_xbrk-europa
+    Info (12022): Found design unit 9: cpu_0_nios2_oci_dbrk-europa
+    Info (12022): Found design unit 10: cpu_0_nios2_oci_itrace-europa
+    Info (12022): Found design unit 11: cpu_0_nios2_oci_td_mode-europa
+    Info (12022): Found design unit 12: cpu_0_nios2_oci_dtrace-europa
+    Info (12022): Found design unit 13: cpu_0_nios2_oci_compute_tm_count-europa
+    Info (12022): Found design unit 14: cpu_0_nios2_oci_fifowp_inc-europa
+    Info (12022): Found design unit 15: cpu_0_nios2_oci_fifocount_inc-europa
+    Info (12022): Found design unit 16: cpu_0_nios2_oci_fifo-europa
+    Info (12022): Found design unit 17: cpu_0_nios2_oci_pib-europa
+    Info (12022): Found design unit 18: cpu_0_traceram_lpm_dram_bdp_component_module-europa
+    Info (12022): Found design unit 19: cpu_0_nios2_oci_im-europa
+    Info (12022): Found design unit 20: cpu_0_nios2_performance_monitors-europa
+    Info (12022): Found design unit 21: cpu_0_nios2_oci-europa
+    Info (12022): Found design unit 22: cpu_0-europa
+    Info (12023): Found entity 1: cpu_0_register_bank_a_module
+    Info (12023): Found entity 2: cpu_0_register_bank_b_module
+    Info (12023): Found entity 3: cpu_0_nios2_oci_debug
+    Info (12023): Found entity 4: cpu_0_ociram_lpm_dram_bdp_component_module
+    Info (12023): Found entity 5: cpu_0_nios2_ocimem
+    Info (12023): Found entity 6: cpu_0_nios2_avalon_reg
+    Info (12023): Found entity 7: cpu_0_nios2_oci_break
+    Info (12023): Found entity 8: cpu_0_nios2_oci_xbrk
+    Info (12023): Found entity 9: cpu_0_nios2_oci_dbrk
+    Info (12023): Found entity 10: cpu_0_nios2_oci_itrace
+    Info (12023): Found entity 11: cpu_0_nios2_oci_td_mode
+    Info (12023): Found entity 12: cpu_0_nios2_oci_dtrace
+    Info (12023): Found entity 13: cpu_0_nios2_oci_compute_tm_count
+    Info (12023): Found entity 14: cpu_0_nios2_oci_fifowp_inc
+    Info (12023): Found entity 15: cpu_0_nios2_oci_fifocount_inc
+    Info (12023): Found entity 16: cpu_0_nios2_oci_fifo
+    Info (12023): Found entity 17: cpu_0_nios2_oci_pib
+    Info (12023): Found entity 18: cpu_0_traceram_lpm_dram_bdp_component_module
+    Info (12023): Found entity 19: cpu_0_nios2_oci_im
+    Info (12023): Found entity 20: cpu_0_nios2_performance_monitors
+    Info (12023): Found entity 21: cpu_0_nios2_oci
+    Info (12023): Found entity 22: cpu_0
+Info (12128): Elaborating entity "cpu_0" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0"
+Warning (10541): VHDL Signal Declaration warning at cpu_0.vhd(4294): used implicit default value for signal "W_vinst" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at cpu_0.vhd(4345): used implicit default value for signal "test_ending" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Warning (12125): Using design file cpu_0_test_bench.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cpu_0_test_bench-europa
+    Info (12023): Found entity 1: cpu_0_test_bench
+Info (12128): Elaborating entity "cpu_0_test_bench" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_test_bench:the_cpu_0_test_bench"
+Info (12128): Elaborating entity "cpu_0_register_bank_a_module" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_a_module:cpu_0_register_bank_a"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_a_module:cpu_0_register_bank_a|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_a_module:cpu_0_register_bank_a|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_a_module:cpu_0_register_bank_a|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "cpu_0_rf_ram_a.mif"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "32"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hff1.tdf
+    Info (12023): Found entity 1: altsyncram_hff1
+Info (12128): Elaborating entity "altsyncram_hff1" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_a_module:cpu_0_register_bank_a|altsyncram:the_altsyncram|altsyncram_hff1:auto_generated"
+Info (12128): Elaborating entity "cpu_0_register_bank_b_module" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "cpu_0_rf_ram_b.mif"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "32"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_iff1.tdf
+    Info (12023): Found entity 1: altsyncram_iff1
+Info (12128): Elaborating entity "altsyncram_iff1" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram|altsyncram_iff1:auto_generated"
+Info (12128): Elaborating entity "cpu_0_nios2_oci" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_debug" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_debug:the_cpu_0_nios2_oci_debug"
+Info (12128): Elaborating entity "cpu_0_nios2_ocimem" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "cpu_0_ociram_lpm_dram_bdp_component_module" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem|cpu_0_ociram_lpm_dram_bdp_component_module:cpu_0_ociram_lpm_dram_bdp_component"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem|cpu_0_ociram_lpm_dram_bdp_component_module:cpu_0_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem|cpu_0_ociram_lpm_dram_bdp_component_module:cpu_0_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem|cpu_0_ociram_lpm_dram_bdp_component_module:cpu_0_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "indata_aclr_a" = "NONE"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "init_file" = "cpu_0_ociram_default_contents.mif"
+    Info (12134): Parameter "intended_device_family" = "CYCLONEIVE"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "256"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "8"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "NONE"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_u972.tdf
+    Info (12023): Found entity 1: altsyncram_u972
+Info (12128): Elaborating entity "altsyncram_u972" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem|cpu_0_ociram_lpm_dram_bdp_component_module:cpu_0_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram|altsyncram_u972:auto_generated"
+Info (12128): Elaborating entity "cpu_0_nios2_avalon_reg" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_avalon_reg:the_cpu_0_nios2_avalon_reg"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_break" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_break:the_cpu_0_nios2_oci_break"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_xbrk" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_xbrk:the_cpu_0_nios2_oci_xbrk"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_dbrk" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_dbrk:the_cpu_0_nios2_oci_dbrk"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_itrace" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_itrace:the_cpu_0_nios2_oci_itrace"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "cpu_0_nios2_oci_dtrace" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_dtrace:the_cpu_0_nios2_oci_dtrace"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_td_mode" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_dtrace:the_cpu_0_nios2_oci_dtrace|cpu_0_nios2_oci_td_mode:cpu_0_nios2_oci_trc_ctrl_td_mode"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_fifo" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_fifo:the_cpu_0_nios2_oci_fifo"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "cpu_0_nios2_oci_compute_tm_count" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_fifo:the_cpu_0_nios2_oci_fifo|cpu_0_nios2_oci_compute_tm_count:cpu_0_nios2_oci_compute_tm_count_tm_count"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_fifowp_inc" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_fifo:the_cpu_0_nios2_oci_fifo|cpu_0_nios2_oci_fifowp_inc:cpu_0_nios2_oci_fifowp_inc_fifowp"
+Info (12128): Elaborating entity "cpu_0_nios2_oci_fifocount_inc" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_fifo:the_cpu_0_nios2_oci_fifo|cpu_0_nios2_oci_fifocount_inc:cpu_0_nios2_oci_fifocount_inc_fifocount"
+Warning (12125): Using design file cpu_0_oci_test_bench.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cpu_0_oci_test_bench-europa
+    Info (12023): Found entity 1: cpu_0_oci_test_bench
+Info (12128): Elaborating entity "cpu_0_oci_test_bench" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_fifo:the_cpu_0_nios2_oci_fifo|cpu_0_oci_test_bench:the_cpu_0_oci_test_bench"
+Warning (12158): Entity "cpu_0_oci_test_bench" contains only dangling pins
+Info (12128): Elaborating entity "cpu_0_nios2_oci_pib" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_pib:the_cpu_0_nios2_oci_pib"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "cpu_0_nios2_oci_im" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Warning (10296): VHDL warning at cpu_0.vhd(2790): ignored assignment of value to null range
+Info (12128): Elaborating entity "cpu_0_traceram_lpm_dram_bdp_component_module" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component"
+Warning (10296): VHDL warning at cpu_0.vhd(2539): ignored assignment of value to null range
+Warning (10296): VHDL warning at cpu_0.vhd(2615): ignored assignment of value to null range
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "indata_aclr_a" = "NONE"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "init_file" = ""
+    Info (12134): Parameter "intended_device_family" = "CYCLONEIVE"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "128"
+    Info (12134): Parameter "numwords_b" = "128"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "width_a" = "36"
+    Info (12134): Parameter "width_b" = "36"
+    Info (12134): Parameter "widthad_a" = "7"
+    Info (12134): Parameter "widthad_b" = "7"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "NONE"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0a02.tdf
+    Info (12023): Found entity 1: altsyncram_0a02
+Info (12128): Elaborating entity "altsyncram_0a02" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram|altsyncram_0a02:auto_generated"
+Warning (12125): Using design file cpu_0_jtag_debug_module_wrapper.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cpu_0_jtag_debug_module_wrapper-europa
+    Info (12023): Found entity 1: cpu_0_jtag_debug_module_wrapper
+Info (12128): Elaborating entity "cpu_0_jtag_debug_module_wrapper" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper"
+Warning (10296): VHDL warning at cpu_0_jtag_debug_module_wrapper.vhd(310): ignored assignment of value to null range
+Warning (12125): Using design file cpu_0_jtag_debug_module_tck.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cpu_0_jtag_debug_module_tck-europa
+    Info (12023): Found entity 1: cpu_0_jtag_debug_module_tck
+Info (12128): Elaborating entity "cpu_0_jtag_debug_module_tck" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck"
+Info (12128): Elaborating entity "altera_std_synchronizer" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer"
+Info (12133): Instantiated megafunction "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_tck:the_cpu_0_jtag_debug_module_tck|altera_std_synchronizer:the_altera_std_synchronizer" with the following parameter:
+    Info (12134): Parameter "depth" = "2"
+Warning (12125): Using design file cpu_0_jtag_debug_module_sysclk.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cpu_0_jtag_debug_module_sysclk-europa
+    Info (12023): Found entity 1: cpu_0_jtag_debug_module_sysclk
+Info (12128): Elaborating entity "cpu_0_jtag_debug_module_sysclk" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|cpu_0_jtag_debug_module_sysclk:the_cpu_0_jtag_debug_module_sysclk"
+Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_0_jtag_debug_module_phy"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_0_jtag_debug_module_phy"
+Info (12133): Instantiated megafunction "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_0_jtag_debug_module_phy" with the following parameter:
+    Info (12134): Parameter "sld_auto_instance_index" = "YES"
+    Info (12134): Parameter "sld_instance_index" = "0"
+    Info (12134): Parameter "sld_ir_width" = "2"
+    Info (12134): Parameter "sld_mfg_id" = "70"
+    Info (12134): Parameter "sld_sim_action" = ""
+    Info (12134): Parameter "sld_sim_n_scan" = "0"
+    Info (12134): Parameter "sld_sim_total_length" = "0"
+    Info (12134): Parameter "sld_type_id" = "34"
+    Info (12134): Parameter "sld_version" = "3"
+Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_0_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst"
+Info (12131): Elaborated megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_0_jtag_debug_module_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "RAMZI:inst|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_jtag_debug_module_wrapper:the_cpu_0_jtag_debug_module_wrapper|sld_virtual_jtag_basic:cpu_0_jtag_debug_module_phy"
+Info (12128): Elaborating entity "entree_s1_arbitrator" for hierarchy "RAMZI:inst|entree_s1_arbitrator:the_entree_s1"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(1673): used implicit default value for signal "cpu_0_data_master_read_data_valid_entree_s1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Warning (12125): Using design file entree.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: entree-europa
+    Info (12023): Found entity 1: entree
+Info (12128): Elaborating entity "entree" for hierarchy "RAMZI:inst|entree:the_entree"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "gestion_anemometre_0_avalon_slave_0_arbitrator" for hierarchy "RAMZI:inst|gestion_anemometre_0_avalon_slave_0_arbitrator:the_gestion_anemometre_0_avalon_slave_0"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(1900): used implicit default value for signal "cpu_0_data_master_read_data_valid_gestion_anemometre_0_avalon_slave_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "gestion_anemometre_0" for hierarchy "RAMZI:inst|gestion_anemometre_0:the_gestion_anemometre_0"
+Info (12128): Elaborating entity "gestion_anemometre" for hierarchy "RAMZI:inst|gestion_anemometre_0:the_gestion_anemometre_0|gestion_anemometre:gestion_anemometre_0"
+Warning (12125): Using design file counter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: counter-arc
+    Info (12023): Found entity 1: counter
+Info (12128): Elaborating entity "counter" for hierarchy "RAMZI:inst|gestion_anemometre_0:the_gestion_anemometre_0|gestion_anemometre:gestion_anemometre_0|counter:b2v_inst"
+Warning (12125): Using design file div_frq_1hz.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: div_frq_1hz-bhv
+    Info (12023): Found entity 1: div_frq_1hz
+Info (12128): Elaborating entity "div_frq_1hz" for hierarchy "RAMZI:inst|gestion_anemometre_0:the_gestion_anemometre_0|gestion_anemometre:gestion_anemometre_0|div_frq_1hz:b2v_inst1"
+Warning (12125): Using design file choix_mode.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: choix_mode-bhv
+    Info (12023): Found entity 1: choix_mode
+Info (12128): Elaborating entity "choix_mode" for hierarchy "RAMZI:inst|gestion_anemometre_0:the_gestion_anemometre_0|gestion_anemometre:gestion_anemometre_0|choix_mode:b2v_inst4"
+Warning (12125): Using design file edge_detect.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: edge_detect-arc
+    Info (12023): Found entity 1: edge_detect
+Info (12128): Elaborating entity "edge_detect" for hierarchy "RAMZI:inst|gestion_anemometre_0:the_gestion_anemometre_0|gestion_anemometre:gestion_anemometre_0|edge_detect:b2v_inst6"
+Info (12128): Elaborating entity "jtag_uart_0_avalon_jtag_slave_arbitrator" for hierarchy "RAMZI:inst|jtag_uart_0_avalon_jtag_slave_arbitrator:the_jtag_uart_0_avalon_jtag_slave"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(2139): used implicit default value for signal "cpu_0_data_master_read_data_valid_jtag_uart_0_avalon_jtag_slave" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (12125): Using design file jtag_uart_0.vhd, which is not specified as a design file for the current project, but contains definitions for 14 design units and 7 entities in project
+    Info (12022): Found design unit 1: jtag_uart_0_log_module-europa
+    Info (12022): Found design unit 2: jtag_uart_0_sim_scfifo_w-europa
+    Info (12022): Found design unit 3: jtag_uart_0_scfifo_w-europa
+    Info (12022): Found design unit 4: jtag_uart_0_drom_module-europa
+    Info (12022): Found design unit 5: jtag_uart_0_sim_scfifo_r-europa
+    Info (12022): Found design unit 6: jtag_uart_0_scfifo_r-europa
+    Info (12022): Found design unit 7: jtag_uart_0-europa
+    Info (12023): Found entity 1: jtag_uart_0_log_module
+    Info (12023): Found entity 2: jtag_uart_0_sim_scfifo_w
+    Info (12023): Found entity 3: jtag_uart_0_scfifo_w
+    Info (12023): Found entity 4: jtag_uart_0_drom_module
+    Info (12023): Found entity 5: jtag_uart_0_sim_scfifo_r
+    Info (12023): Found entity 6: jtag_uart_0_scfifo_r
+    Info (12023): Found entity 7: jtag_uart_0
+Info (12128): Elaborating entity "jtag_uart_0" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "jtag_uart_0_scfifo_w" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w"
+Info (12128): Elaborating entity "scfifo" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo"
+Info (12133): Instantiated megafunction "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo" with the following parameter:
+    Info (12134): Parameter "lpm_hint" = "RAM_BLOCK_TYPE=AUTO"
+    Info (12134): Parameter "lpm_numwords" = "64"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "6"
+    Info (12134): Parameter "overflow_checking" = "OFF"
+    Info (12134): Parameter "underflow_checking" = "OFF"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_jr21.tdf
+    Info (12023): Found entity 1: scfifo_jr21
+Info (12128): Elaborating entity "scfifo_jr21" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_q131.tdf
+    Info (12023): Found entity 1: a_dpfifo_q131
+Info (12128): Elaborating entity "a_dpfifo_q131" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_7cf.tdf
+    Info (12023): Found entity 1: a_fefifo_7cf
+Info (12128): Elaborating entity "a_fefifo_7cf" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_do7.tdf
+    Info (12023): Found entity 1: cntr_do7
+Info (12128): Elaborating entity "cntr_do7" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|a_fefifo_7cf:fifo_state|cntr_do7:count_usedw"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dpram_nl21.tdf
+    Info (12023): Found entity 1: dpram_nl21
+Info (12128): Elaborating entity "dpram_nl21" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r1m1.tdf
+    Info (12023): Found entity 1: altsyncram_r1m1
+Info (12128): Elaborating entity "altsyncram_r1m1" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|dpram_nl21:FIFOram|altsyncram_r1m1:altsyncram1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1ob.tdf
+    Info (12023): Found entity 1: cntr_1ob
+Info (12128): Elaborating entity "cntr_1ob" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo|scfifo_jr21:auto_generated|a_dpfifo_q131:dpfifo|cntr_1ob:rd_ptr_count"
+Info (12128): Elaborating entity "jtag_uart_0_scfifo_r" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_r:the_jtag_uart_0_scfifo_r"
+Info (12128): Elaborating entity "alt_jtag_atlantic" for hierarchy "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|alt_jtag_atlantic:jtag_uart_0_alt_jtag_atlantic"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|alt_jtag_atlantic:jtag_uart_0_alt_jtag_atlantic"
+Info (12133): Instantiated megafunction "RAMZI:inst|jtag_uart_0:the_jtag_uart_0|alt_jtag_atlantic:jtag_uart_0_alt_jtag_atlantic" with the following parameter:
+    Info (12134): Parameter "INSTANCE_ID" = "0"
+    Info (12134): Parameter "LOG2_RXFIFO_DEPTH" = "6"
+    Info (12134): Parameter "LOG2_TXFIFO_DEPTH" = "6"
+    Info (12134): Parameter "SLD_AUTO_INSTANCE_INDEX" = "YES"
+Info (12128): Elaborating entity "onchip_memory2_0_s1_arbitrator" for hierarchy "RAMZI:inst|onchip_memory2_0_s1_arbitrator:the_onchip_memory2_0_s1"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Warning (12125): Using design file onchip_memory2_0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: onchip_memory2_0-europa
+    Info (12023): Found entity 1: onchip_memory2_0
+Info (12128): Elaborating entity "onchip_memory2_0" for hierarchy "RAMZI:inst|onchip_memory2_0:the_onchip_memory2_0"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAMZI:inst|onchip_memory2_0:the_onchip_memory2_0|altsyncram:the_altsyncram"
+Info (12130): Elaborated megafunction instantiation "RAMZI:inst|onchip_memory2_0:the_onchip_memory2_0|altsyncram:the_altsyncram"
+Info (12133): Instantiated megafunction "RAMZI:inst|onchip_memory2_0:the_onchip_memory2_0|altsyncram:the_altsyncram" with the following parameter:
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "init_file" = "onchip_memory2_0.hex"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "maximum_depth" = "5000"
+    Info (12134): Parameter "numwords_a" = "5000"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+    Info (12134): Parameter "widthad_a" = "13"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_08c1.tdf
+    Info (12023): Found entity 1: altsyncram_08c1
+Info (12128): Elaborating entity "altsyncram_08c1" for hierarchy "RAMZI:inst|onchip_memory2_0:the_onchip_memory2_0|altsyncram:the_altsyncram|altsyncram_08c1:auto_generated"
+Info (12128): Elaborating entity "sortie_s1_arbitrator" for hierarchy "RAMZI:inst|sortie_s1_arbitrator:the_sortie_s1"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(2813): used implicit default value for signal "cpu_0_data_master_read_data_valid_sortie_s1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Warning (12125): Using design file sortie.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: sortie-europa
+    Info (12023): Found entity 1: sortie
+Info (12128): Elaborating entity "sortie" for hierarchy "RAMZI:inst|sortie:the_sortie"
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "sysid_control_slave_arbitrator" for hierarchy "RAMZI:inst|sysid_control_slave_arbitrator:the_sysid_control_slave"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(3046): used implicit default value for signal "cpu_0_data_master_read_data_valid_sysid_control_slave" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (12125): Using design file sysid.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: sysid-europa
+    Info (12023): Found entity 1: sysid
+Info (12128): Elaborating entity "sysid" for hierarchy "RAMZI:inst|sysid:the_sysid"
+Info (12128): Elaborating entity "verin_test_0_avalon_slave_0_arbitrator" for hierarchy "RAMZI:inst|verin_test_0_avalon_slave_0_arbitrator:the_verin_test_0_avalon_slave_0"
+Warning (10541): VHDL Signal Declaration warning at ramzi.vhd(3273): used implicit default value for signal "cpu_0_data_master_read_data_valid_verin_test_0_avalon_slave_0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Info (12128): Elaborating entity "verin_test_0" for hierarchy "RAMZI:inst|verin_test_0:the_verin_test_0"
+Info (12128): Elaborating entity "verin_test" for hierarchy "RAMZI:inst|verin_test_0:the_verin_test_0|verin_test:verin_test_0"
+Warning (10492): VHDL Process Statement warning at verin_test.vhd(162): signal "raz_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at verin_test.vhd(176): signal "raz_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "RAMZI_reset_clk_0_domain_synch_module" for hierarchy "RAMZI:inst|RAMZI_reset_clk_0_domain_synch_module:RAMZI_reset_clk_0_domain_synch"
+Error (12006): Node instance "the_avalon_txd_0" instantiates undefined entity "avalon_txd_0" File: C:/Users/sharr/OneDrive/Bureau/BE_CHARRAT_MOATASSIM/BE/sopc_BB/ramzi.vhd Line: 4634
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 80 warnings
+    Error: Peak virtual memory: 362 megabytes
+    Error: Processing ended: Tue Dec 14 18:14:32 2021
+    Error: Elapsed time: 00:00:06
+    Error: Total CPU time (on all processors): 00:00:05
+
+

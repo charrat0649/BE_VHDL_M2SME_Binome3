@@ -1,0 +1,7 @@
+|divis
+clk50M => cpt[1].CLK
+clk50M => cpt[0].CLK
+clk50M => clk1hz~reg0.CLK
+clk1hz <= clk1hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

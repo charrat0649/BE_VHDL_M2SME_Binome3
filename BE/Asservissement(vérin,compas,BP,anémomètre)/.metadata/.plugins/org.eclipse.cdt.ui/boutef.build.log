@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project boutef ****
+
+make all 
+Info: Building ../boutef_bsp/
+make --no-print-directory -C ../boutef_bsp/
+[BSP build complete]
+[boutef build complete]

@@ -1,0 +1,1631 @@
+TimeQuest Timing Analyzer report for gestion_anemometre
+Tue Oct 05 11:32:10 2021
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Setup: 'in_freq_anemometre'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Hold: 'in_freq_anemometre'
+ 15. Slow Model Recovery: 'in_freq_anemometre'
+ 16. Slow Model Removal: 'in_freq_anemometre'
+ 17. Slow Model Minimum Pulse Width: 'clk'
+ 18. Slow Model Minimum Pulse Width: 'in_freq_anemometre'
+ 19. Setup Times
+ 20. Hold Times
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'clk'
+ 29. Fast Model Setup: 'in_freq_anemometre'
+ 30. Fast Model Hold: 'clk'
+ 31. Fast Model Hold: 'in_freq_anemometre'
+ 32. Fast Model Recovery: 'in_freq_anemometre'
+ 33. Fast Model Removal: 'in_freq_anemometre'
+ 34. Fast Model Minimum Pulse Width: 'clk'
+ 35. Fast Model Minimum Pulse Width: 'in_freq_anemometre'
+ 36. Setup Times
+ 37. Hold Times
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Multicorner Timing Analysis Summary
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Setup Transfers
+ 46. Hold Transfers
+ 47. Recovery Transfers
+ 48. Removal Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; gestion_anemometre                                              ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C35F672C6                                                    ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                 ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; Clock Name         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; clk                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                ;
+; in_freq_anemometre ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { in_freq_anemometre } ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                           ;
++------------+-----------------+--------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name         ; Note                                                          ;
++------------+-----------------+--------------------+---------------------------------------------------------------+
+; 153.47 MHz ; 153.47 MHz      ; clk                ;                                                               ;
+; 551.88 MHz ; 450.05 MHz      ; in_freq_anemometre ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+--------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------+
+; Slow Model Setup Summary                    ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clk                ; -5.516 ; -125.040      ;
+; in_freq_anemometre ; -0.812 ; -3.877        ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------+
+; Slow Model Hold Summary                    ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; clk                ; 0.391 ; 0.000         ;
+; in_freq_anemometre ; 0.391 ; 0.000         ;
++--------------------+-------+---------------+
+
+
++---------------------------------------------+
+; Slow Model Recovery Summary                 ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; in_freq_anemometre ; -0.392 ; -3.136        ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------+
+; Slow Model Removal Summary                 ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; in_freq_anemometre ; 0.834 ; 0.000         ;
++--------------------+-------+---------------+
+
+
++---------------------------------------------+
+; Slow Model Minimum Pulse Width Summary      ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clk                ; -1.380 ; -61.380       ;
+; in_freq_anemometre ; -1.222 ; -9.222        ;
++--------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.516 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.555      ;
+; -5.514 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.553      ;
+; -5.513 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.552      ;
+; -5.513 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.552      ;
+; -5.512 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.551      ;
+; -5.509 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.548      ;
+; -5.508 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.547      ;
+; -5.507 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.546      ;
+; -5.410 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.449      ;
+; -5.408 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.447      ;
+; -5.407 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.446      ;
+; -5.407 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.446      ;
+; -5.406 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.445      ;
+; -5.403 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.442      ;
+; -5.402 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.441      ;
+; -5.401 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.440      ;
+; -5.375 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.414      ;
+; -5.373 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.412      ;
+; -5.372 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.411      ;
+; -5.372 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.411      ;
+; -5.371 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.410      ;
+; -5.368 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.407      ;
+; -5.367 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.406      ;
+; -5.366 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.405      ;
+; -5.304 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.343      ;
+; -5.302 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.341      ;
+; -5.301 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.340      ;
+; -5.301 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.340      ;
+; -5.300 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.339      ;
+; -5.297 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.336      ;
+; -5.296 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.335      ;
+; -5.295 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.334      ;
+; -5.253 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.292      ;
+; -5.250 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.289      ;
+; -5.250 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.289      ;
+; -5.201 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.240      ;
+; -5.199 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.238      ;
+; -5.198 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.237      ;
+; -5.198 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.237      ;
+; -5.197 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.236      ;
+; -5.194 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.233      ;
+; -5.193 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.232      ;
+; -5.192 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.231      ;
+; -5.147 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.001      ; 6.184      ;
+; -5.147 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.186      ;
+; -5.144 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.183      ;
+; -5.144 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.183      ;
+; -5.112 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.151      ;
+; -5.109 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.148      ;
+; -5.109 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.148      ;
+; -5.067 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.106      ;
+; -5.065 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.104      ;
+; -5.064 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.103      ;
+; -5.064 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.103      ;
+; -5.063 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.102      ;
+; -5.060 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.099      ;
+; -5.059 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.098      ;
+; -5.058 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.097      ;
+; -5.047 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.083      ;
+; -5.045 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.081      ;
+; -5.044 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.080      ;
+; -5.044 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.080      ;
+; -5.043 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.079      ;
+; -5.041 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.080      ;
+; -5.041 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.001      ; 6.078      ;
+; -5.040 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.076      ;
+; -5.039 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.075      ;
+; -5.038 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 6.074      ;
+; -5.038 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.077      ;
+; -5.038 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.077      ;
+; -5.006 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.001      ; 6.043      ;
+; -4.966 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.005      ;
+; -4.964 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.003      ;
+; -4.963 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.002      ;
+; -4.963 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.002      ;
+; -4.962 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 6.001      ;
+; -4.959 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.998      ;
+; -4.958 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.997      ;
+; -4.957 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.996      ;
+; -4.938 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.977      ;
+; -4.935 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.974      ;
+; -4.935 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.974      ;
+; -4.935 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.001      ; 5.972      ;
+; -4.915 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 5.951      ;
+; -4.891 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.930      ;
+; -4.889 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.928      ;
+; -4.888 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.927      ;
+; -4.888 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.927      ;
+; -4.887 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.926      ;
+; -4.884 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.923      ;
+; -4.883 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.922      ;
+; -4.882 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.921      ;
+; -4.832 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.001      ; 5.869      ;
+; -4.825 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.864      ;
+; -4.823 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.862      ;
+; -4.822 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.861      ;
+; -4.822 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.861      ;
+; -4.821 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.860      ;
+; -4.818 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.857      ;
+; -4.817 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.003      ; 5.856      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'in_freq_anemometre'                                                                                                                                                    ;
++--------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                                       ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.812 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.848      ;
+; -0.763 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.799      ;
+; -0.741 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.777      ;
+; -0.701 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.737      ;
+; -0.692 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.728      ;
+; -0.670 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.706      ;
+; -0.631 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.667      ;
+; -0.630 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.666      ;
+; -0.621 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.657      ;
+; -0.599 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.635      ;
+; -0.594 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.630      ;
+; -0.593 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.629      ;
+; -0.560 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.596      ;
+; -0.559 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.595      ;
+; -0.550 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.586      ;
+; -0.528 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.564      ;
+; -0.522 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.558      ;
+; -0.490 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.526      ;
+; -0.489 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.525      ;
+; -0.488 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.524      ;
+; -0.479 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.515      ;
+; -0.457 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.493      ;
+; -0.451 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.487      ;
+; -0.419 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.455      ;
+; -0.418 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.454      ;
+; -0.417 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.453      ;
+; -0.408 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.444      ;
+; -0.211 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.247      ;
+; -0.070 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.106      ;
+; -0.065 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.101      ;
+; -0.036 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.072      ;
+; -0.035 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.071      ;
+; -0.034 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.070      ;
+; -0.025 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 1.061      ;
+; 0.244  ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.792      ;
+; 0.379  ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.657      ;
++--------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                      ;
++-------+-----------------------------------------------+-----------------------------------------+--------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                 ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-----------------------------------------+--------------------+-------------+--------------+------------+------------+
+; 0.391 ; edge_detect:b2v_inst6|reset                   ; edge_detect:b2v_inst6|reset             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; edge_detect:b2v_inst6|etat[1]                 ; edge_detect:b2v_inst6|etat[1]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.646 ; choix_mode:b2v_inst4|tmp1[4]                  ; choix_mode:b2v_inst4|tmp[4]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.912      ;
+; 0.665 ; config[0]                                     ; raz_n_tmp                               ; clk                ; clk         ; 0.000        ; 0.000      ; 0.931      ;
+; 0.665 ; config[2]                                     ; start_stop_tmp                          ; clk                ; clk         ; 0.000        ; 0.000      ; 0.931      ;
+; 0.666 ; config[1]                                     ; continu_tmp                             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.932      ;
+; 0.749 ; edge_detect:b2v_inst6|etat[1]                 ; edge_detect:b2v_inst6|reset             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.015      ;
+; 0.795 ; div_frq_1hz:b2v_inst1|cpt[24]                 ; div_frq_1hz:b2v_inst1|cpt[24]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; div_frq_1hz:b2v_inst1|cpt[10]                 ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; div_frq_1hz:b2v_inst1|cpt[11]                 ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.796 ; choix_mode:b2v_inst4|tmp1[6]                  ; choix_mode:b2v_inst4|tmp[6]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.062      ;
+; 0.797 ; choix_mode:b2v_inst4|tmp1[1]                  ; choix_mode:b2v_inst4|tmp[1]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.797 ; choix_mode:b2v_inst4|tmp1[7]                  ; choix_mode:b2v_inst4|tmp[7]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.797 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[6]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.798 ; div_frq_1hz:b2v_inst1|cpt[6]                  ; div_frq_1hz:b2v_inst1|cpt[6]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.064      ;
+; 0.798 ; choix_mode:b2v_inst4|tmp1[5]                  ; choix_mode:b2v_inst4|tmp[5]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.064      ;
+; 0.798 ; choix_mode:b2v_inst4|tmp[7]                   ; choix_mode:b2v_inst4|data_anemometre[7] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.063      ;
+; 0.799 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[8]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; div_frq_1hz:b2v_inst1|cpt[4]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[1]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.065      ;
+; 0.806 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[7]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.807 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[5]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.073      ;
+; 0.810 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[1]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.076      ;
+; 0.825 ; div_frq_1hz:b2v_inst1|cpt[5]                  ; div_frq_1hz:b2v_inst1|cpt[5]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.091      ;
+; 0.828 ; div_frq_1hz:b2v_inst1|cpt[16]                 ; div_frq_1hz:b2v_inst1|cpt[16]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828 ; div_frq_1hz:b2v_inst1|cpt[18]                 ; div_frq_1hz:b2v_inst1|cpt[18]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828 ; div_frq_1hz:b2v_inst1|cpt[9]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828 ; choix_mode:b2v_inst4|tmp1[2]                  ; choix_mode:b2v_inst4|tmp[2]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.829 ; choix_mode:b2v_inst4|tmp1[3]                  ; choix_mode:b2v_inst4|tmp[3]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.095      ;
+; 0.830 ; choix_mode:b2v_inst4|tmp[0]                   ; choix_mode:b2v_inst4|data_anemometre[0] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.095      ;
+; 0.830 ; choix_mode:b2v_inst4|tmp1[0]                  ; choix_mode:b2v_inst4|tmp[0]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.096      ;
+; 0.831 ; div_frq_1hz:b2v_inst1|cpt[0]                  ; div_frq_1hz:b2v_inst1|cpt[0]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.097      ;
+; 0.832 ; div_frq_1hz:b2v_inst1|cpt[3]                  ; div_frq_1hz:b2v_inst1|cpt[3]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; div_frq_1hz:b2v_inst1|cpt[2]                  ; div_frq_1hz:b2v_inst1|cpt[2]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.098      ;
+; 0.839 ; edge_detect:b2v_inst6|reset                   ; edge_detect:b2v_inst6|etat[1]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.940 ; choix_mode:b2v_inst4|tmp[3]                   ; choix_mode:b2v_inst4|data_anemometre[3] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.205      ;
+; 0.973 ; choix_mode:b2v_inst4|tmp[5]                   ; choix_mode:b2v_inst4|data_anemometre[5] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.238      ;
+; 0.987 ; choix_mode:b2v_inst4|tmp[6]                   ; choix_mode:b2v_inst4|data_anemometre[6] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.252      ;
+; 0.988 ; choix_mode:b2v_inst4|tmp[4]                   ; choix_mode:b2v_inst4|data_anemometre[4] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.253      ;
+; 1.011 ; choix_mode:b2v_inst4|tmp[2]                   ; choix_mode:b2v_inst4|data_anemometre[2] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.276      ;
+; 1.016 ; choix_mode:b2v_inst4|tmp[1]                   ; choix_mode:b2v_inst4|data_anemometre[1] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.281      ;
+; 1.042 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[0]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.308      ;
+; 1.046 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[4]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.051 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[3]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.317      ;
+; 1.056 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[2]             ; clk                ; clk         ; 0.000        ; 0.000      ; 1.322      ;
+; 1.113 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_valid         ; clk                ; clk         ; 0.000        ; -0.001     ; 1.378      ;
+; 1.134 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[3] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.399      ;
+; 1.135 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[6] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.400      ;
+; 1.138 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[5] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.403      ;
+; 1.138 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[4] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.403      ;
+; 1.139 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[1] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.404      ;
+; 1.141 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[2] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.406      ;
+; 1.177 ; div_frq_1hz:b2v_inst1|cpt[7]                  ; div_frq_1hz:b2v_inst1|cpt[8]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.443      ;
+; 1.178 ; div_frq_1hz:b2v_inst1|cpt[10]                 ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.444      ;
+; 1.182 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.448      ;
+; 1.182 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[2]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.448      ;
+; 1.185 ; div_frq_1hz:b2v_inst1|cpt[15]                 ; div_frq_1hz:b2v_inst1|cpt[16]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.451      ;
+; 1.192 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; choix_mode:b2v_inst4|tmp1[3]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.001      ;
+; 1.193 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; choix_mode:b2v_inst4|tmp1[4]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.002      ;
+; 1.194 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; choix_mode:b2v_inst4|tmp[2]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.003      ;
+; 1.195 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; choix_mode:b2v_inst4|tmp1[2]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.004      ;
+; 1.195 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; choix_mode:b2v_inst4|tmp[3]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.004      ;
+; 1.198 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; choix_mode:b2v_inst4|tmp[4]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.007      ;
+; 1.211 ; div_frq_1hz:b2v_inst1|cpt[5]                  ; div_frq_1hz:b2v_inst1|cpt[6]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.477      ;
+; 1.214 ; div_frq_1hz:b2v_inst1|cpt[9]                  ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.480      ;
+; 1.215 ; div_frq_1hz:b2v_inst1|clk_1hz                 ; div_frq_1hz:b2v_inst1|clk_1hz           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.481      ;
+; 1.217 ; div_frq_1hz:b2v_inst1|cpt[0]                  ; div_frq_1hz:b2v_inst1|cpt[1]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.218 ; div_frq_1hz:b2v_inst1|cpt[3]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.484      ;
+; 1.218 ; div_frq_1hz:b2v_inst1|cpt[2]                  ; div_frq_1hz:b2v_inst1|cpt[3]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.484      ;
+; 1.226 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; choix_mode:b2v_inst4|tmp[0]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.035      ;
+; 1.231 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; choix_mode:b2v_inst4|tmp1[0]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.040      ;
+; 1.248 ; div_frq_1hz:b2v_inst1|cpt[7]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.514      ;
+; 1.252 ; div_frq_1hz:b2v_inst1|cpt[6]                  ; div_frq_1hz:b2v_inst1|cpt[8]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.518      ;
+; 1.253 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.519      ;
+; 1.253 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[3]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.519      ;
+; 1.256 ; div_frq_1hz:b2v_inst1|cpt[14]                 ; div_frq_1hz:b2v_inst1|cpt[16]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.522      ;
+; 1.273 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[1] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.538      ;
+; 1.274 ; div_frq_1hz:b2v_inst1|cpt[4]                  ; div_frq_1hz:b2v_inst1|cpt[5]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.540      ;
+; 1.275 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[2] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.540      ;
+; 1.276 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_valid         ; clk                ; clk         ; 0.000        ; -0.001     ; 1.541      ;
+; 1.278 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[7] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.543      ;
+; 1.279 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[0] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.544      ;
+; 1.285 ; div_frq_1hz:b2v_inst1|cpt[16]                 ; div_frq_1hz:b2v_inst1|cpt[18]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.551      ;
+; 1.285 ; div_frq_1hz:b2v_inst1|cpt[9]                  ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.551      ;
+; 1.288 ; div_frq_1hz:b2v_inst1|cpt[0]                  ; div_frq_1hz:b2v_inst1|cpt[2]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.554      ;
+; 1.289 ; div_frq_1hz:b2v_inst1|cpt[2]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.555      ;
+; 1.300 ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; choix_mode:b2v_inst4|tmp[7]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.109      ;
+; 1.300 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[0] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.565      ;
+; 1.304 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[7] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.569      ;
+; 1.304 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[4] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.569      ;
+; 1.306 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[5] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.571      ;
+; 1.311 ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; choix_mode:b2v_inst4|tmp1[7]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.120      ;
+; 1.311 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[6] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.576      ;
+; 1.313 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[3] ; clk                ; clk         ; 0.000        ; -0.001     ; 1.578      ;
+; 1.319 ; div_frq_1hz:b2v_inst1|cpt[7]                  ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.585      ;
+; 1.323 ; div_frq_1hz:b2v_inst1|cpt[6]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.589      ;
+; 1.324 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; choix_mode:b2v_inst4|tmp[1]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.133      ;
+; 1.324 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; choix_mode:b2v_inst4|tmp[5]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.457     ; 1.133      ;
+; 1.324 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 1.590      ;
+; 1.324 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 1.590      ;
++-------+-----------------------------------------------+-----------------------------------------+--------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'in_freq_anemometre'                                                                                                                                                    ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                       ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.391 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.657      ;
+; 0.526 ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.792      ;
+; 0.795 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.061      ;
+; 0.804 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.070      ;
+; 0.805 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.072      ;
+; 0.835 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.101      ;
+; 0.840 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.106      ;
+; 0.981 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.247      ;
+; 1.178 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.444      ;
+; 1.187 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.453      ;
+; 1.188 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.454      ;
+; 1.189 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.455      ;
+; 1.221 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.487      ;
+; 1.227 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.493      ;
+; 1.249 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.515      ;
+; 1.258 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.524      ;
+; 1.259 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.525      ;
+; 1.260 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.526      ;
+; 1.292 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.558      ;
+; 1.298 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.564      ;
+; 1.320 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.586      ;
+; 1.329 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.595      ;
+; 1.330 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.596      ;
+; 1.363 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.629      ;
+; 1.364 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.630      ;
+; 1.369 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.635      ;
+; 1.391 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.657      ;
+; 1.400 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.666      ;
+; 1.401 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.667      ;
+; 1.440 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.706      ;
+; 1.462 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.728      ;
+; 1.471 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.737      ;
+; 1.511 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.777      ;
+; 1.533 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.799      ;
+; 1.582 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 1.848      ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'in_freq_anemometre'                                                                                                                         ;
++--------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                                       ; Launch Clock ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.392 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 1.000        ; 0.456      ; 1.884      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
+; -0.064 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 1.000        ; 0.457      ; 1.557      ;
++--------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'in_freq_anemometre'                                                                                                                         ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                                       ; Launch Clock ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 0.834 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 0.000        ; 0.457      ; 1.557      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
+; 1.162 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 0.000        ; 0.456      ; 1.884      ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_valid         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_valid         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; config[0]                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; config[0]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; config[1]                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; config[1]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; config[2]                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; config[2]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; continu_tmp                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; continu_tmp                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|clk_1hz           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|clk_1hz           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[12]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[12]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[13]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[13]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[14]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[14]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[15]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[15]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[16]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[16]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[17]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[17]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[18]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[18]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[19]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[19]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[20]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[20]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[21]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[21]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[22]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[22]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[23]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[23]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[24]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[24]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[25]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[25]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[3]            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'in_freq_anemometre'                                                                                        ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                                        ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; in_freq_anemometre ; Rise       ; in_freq_anemometre                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[0]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[0]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[1]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[1]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[2]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[2]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[3]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[3]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[4]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[4]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[5]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[5]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[6]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[6]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[7]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[7]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; in_freq_anemometre|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; in_freq_anemometre|combout                    ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; chipselect    ; clk        ; 5.055 ; 5.055 ; Rise       ; clk             ;
+; reset_n       ; clk        ; 4.774 ; 4.774 ; Rise       ; clk             ;
+; write_n       ; clk        ; 4.958 ; 4.958 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; 3.677 ; 3.677 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; 3.529 ; 3.529 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; 3.677 ; 3.677 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; chipselect    ; clk        ; -4.825 ; -4.825 ; Rise       ; clk             ;
+; reset_n       ; clk        ; -4.544 ; -4.544 ; Rise       ; clk             ;
+; write_n       ; clk        ; -4.728 ; -4.728 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; -3.299 ; -3.299 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; -3.299 ; -3.299 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; -3.394 ; -3.394 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; -3.447 ; -3.447 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; internal_reset ; clk        ; 6.691 ; 6.691 ; Rise       ; clk             ;
+; readdata[*]    ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
+;  readdata[0]   ; clk        ; 7.928 ; 7.928 ; Rise       ; clk             ;
+;  readdata[1]   ; clk        ; 7.013 ; 7.013 ; Rise       ; clk             ;
+;  readdata[2]   ; clk        ; 7.031 ; 7.031 ; Rise       ; clk             ;
+;  readdata[3]   ; clk        ; 6.994 ; 6.994 ; Rise       ; clk             ;
+;  readdata[4]   ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
+;  readdata[5]   ; clk        ; 6.989 ; 6.989 ; Rise       ; clk             ;
+;  readdata[6]   ; clk        ; 7.246 ; 7.246 ; Rise       ; clk             ;
+;  readdata[7]   ; clk        ; 7.530 ; 7.530 ; Rise       ; clk             ;
+;  readdata[9]   ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; internal_reset ; clk        ; 6.691 ; 6.691 ; Rise       ; clk             ;
+; readdata[*]    ; clk        ; 6.989 ; 6.989 ; Rise       ; clk             ;
+;  readdata[0]   ; clk        ; 7.928 ; 7.928 ; Rise       ; clk             ;
+;  readdata[1]   ; clk        ; 7.013 ; 7.013 ; Rise       ; clk             ;
+;  readdata[2]   ; clk        ; 7.031 ; 7.031 ; Rise       ; clk             ;
+;  readdata[3]   ; clk        ; 6.994 ; 6.994 ; Rise       ; clk             ;
+;  readdata[4]   ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
+;  readdata[5]   ; clk        ; 6.989 ; 6.989 ; Rise       ; clk             ;
+;  readdata[6]   ; clk        ; 7.246 ; 7.246 ; Rise       ; clk             ;
+;  readdata[7]   ; clk        ; 7.530 ; 7.530 ; Rise       ; clk             ;
+;  readdata[9]   ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------+
+; Fast Model Setup Summary                    ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clk                ; -1.985 ; -32.451       ;
+; in_freq_anemometre ; 0.190  ; 0.000         ;
++--------------------+--------+---------------+
+
+
++--------------------------------------------+
+; Fast Model Hold Summary                    ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; clk                ; 0.215 ; 0.000         ;
+; in_freq_anemometre ; 0.215 ; 0.000         ;
++--------------------+-------+---------------+
+
+
++--------------------------------------------+
+; Fast Model Recovery Summary                ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; in_freq_anemometre ; 0.096 ; 0.000         ;
++--------------------+-------+---------------+
+
+
++--------------------------------------------+
+; Fast Model Removal Summary                 ;
++--------------------+-------+---------------+
+; Clock              ; Slack ; End Point TNS ;
++--------------------+-------+---------------+
+; in_freq_anemometre ; 0.673 ; 0.000         ;
++--------------------+-------+---------------+
+
+
++---------------------------------------------+
+; Fast Model Minimum Pulse Width Summary      ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clk                ; -1.380 ; -61.380       ;
+; in_freq_anemometre ; -1.222 ; -9.222        ;
++--------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.985 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.019      ;
+; -1.984 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.018      ;
+; -1.981 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.015      ;
+; -1.981 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.015      ;
+; -1.980 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.014      ;
+; -1.980 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.014      ;
+; -1.980 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.014      ;
+; -1.979 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 3.013      ;
+; -1.938 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.972      ;
+; -1.937 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.971      ;
+; -1.934 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.968      ;
+; -1.934 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.968      ;
+; -1.933 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.967      ;
+; -1.933 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.967      ;
+; -1.933 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.967      ;
+; -1.932 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.966      ;
+; -1.916 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.950      ;
+; -1.915 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.949      ;
+; -1.912 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.946      ;
+; -1.912 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.946      ;
+; -1.911 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.945      ;
+; -1.911 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.945      ;
+; -1.911 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.945      ;
+; -1.910 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.944      ;
+; -1.881 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.915      ;
+; -1.880 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.914      ;
+; -1.877 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.911      ;
+; -1.877 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.911      ;
+; -1.876 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.910      ;
+; -1.876 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.910      ;
+; -1.876 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.910      ;
+; -1.875 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.909      ;
+; -1.861 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.896      ;
+; -1.861 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.896      ;
+; -1.861 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.896      ;
+; -1.829 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.863      ;
+; -1.828 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.862      ;
+; -1.825 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.859      ;
+; -1.825 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.859      ;
+; -1.824 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.858      ;
+; -1.824 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.858      ;
+; -1.824 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.858      ;
+; -1.823 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.857      ;
+; -1.814 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.849      ;
+; -1.814 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.849      ;
+; -1.814 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.849      ;
+; -1.804 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.000      ; 2.836      ;
+; -1.792 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.827      ;
+; -1.792 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.827      ;
+; -1.792 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.827      ;
+; -1.757 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.792      ;
+; -1.757 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.792      ;
+; -1.757 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.792      ;
+; -1.757 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.000      ; 2.789      ;
+; -1.748 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.782      ;
+; -1.747 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.781      ;
+; -1.744 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.778      ;
+; -1.744 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.778      ;
+; -1.743 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.777      ;
+; -1.743 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.777      ;
+; -1.743 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.777      ;
+; -1.742 ; div_frq_1hz:b2v_inst1|cpt[5]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.776      ;
+; -1.735 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.000      ; 2.767      ;
+; -1.730 ; div_frq_1hz:b2v_inst1|cpt[0]  ; div_frq_1hz:b2v_inst1|cpt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.762      ;
+; -1.706 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.738      ;
+; -1.705 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.737      ;
+; -1.705 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[15] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.740      ;
+; -1.705 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[14] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.740      ;
+; -1.705 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|cpt[13] ; clk          ; clk         ; 1.000        ; 0.003      ; 2.740      ;
+; -1.703 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.737      ;
+; -1.702 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.736      ;
+; -1.702 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.734      ;
+; -1.702 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.734      ;
+; -1.701 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.733      ;
+; -1.701 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.733      ;
+; -1.701 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.733      ;
+; -1.700 ; div_frq_1hz:b2v_inst1|cpt[12] ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.732      ;
+; -1.700 ; div_frq_1hz:b2v_inst1|cpt[3]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.000      ; 2.732      ;
+; -1.699 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.733      ;
+; -1.699 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.733      ;
+; -1.698 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.732      ;
+; -1.698 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.732      ;
+; -1.698 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.732      ;
+; -1.697 ; div_frq_1hz:b2v_inst1|cpt[6]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.731      ;
+; -1.683 ; div_frq_1hz:b2v_inst1|cpt[1]  ; div_frq_1hz:b2v_inst1|cpt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.715      ;
+; -1.667 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.701      ;
+; -1.666 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.700      ;
+; -1.663 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.697      ;
+; -1.663 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.697      ;
+; -1.662 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.696      ;
+; -1.662 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[17] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.696      ;
+; -1.662 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[21] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.696      ;
+; -1.661 ; div_frq_1hz:b2v_inst1|cpt[7]  ; div_frq_1hz:b2v_inst1|cpt[12] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.695      ;
+; -1.661 ; div_frq_1hz:b2v_inst1|cpt[2]  ; div_frq_1hz:b2v_inst1|cpt[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.693      ;
+; -1.648 ; div_frq_1hz:b2v_inst1|cpt[4]  ; div_frq_1hz:b2v_inst1|clk_1hz ; clk          ; clk         ; 1.000        ; 0.000      ; 2.680      ;
+; -1.633 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[22] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.667      ;
+; -1.632 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[25] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.666      ;
+; -1.629 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[20] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.663      ;
+; -1.629 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[19] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.663      ;
+; -1.628 ; div_frq_1hz:b2v_inst1|cpt[8]  ; div_frq_1hz:b2v_inst1|cpt[23] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.662      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'in_freq_anemometre'                                                                                                                                                   ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                       ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.190 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.842      ;
+; 0.212 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.820      ;
+; 0.225 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.807      ;
+; 0.243 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.789      ;
+; 0.247 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.785      ;
+; 0.260 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.772      ;
+; 0.277 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.755      ;
+; 0.278 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.754      ;
+; 0.282 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.750      ;
+; 0.295 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.737      ;
+; 0.300 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.732      ;
+; 0.301 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.731      ;
+; 0.312 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.720      ;
+; 0.313 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.719      ;
+; 0.317 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.715      ;
+; 0.330 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.702      ;
+; 0.336 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.696      ;
+; 0.347 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.685      ;
+; 0.347 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.685      ;
+; 0.348 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.684      ;
+; 0.352 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.680      ;
+; 0.365 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.667      ;
+; 0.371 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.661      ;
+; 0.382 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.650      ;
+; 0.382 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.650      ;
+; 0.383 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.649      ;
+; 0.387 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.645      ;
+; 0.438 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.594      ;
+; 0.505 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.527      ;
+; 0.511 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.521      ;
+; 0.520 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.512      ;
+; 0.520 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.512      ;
+; 0.521 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.511      ;
+; 0.522 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.510      ;
+; 0.639 ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.393      ;
+; 0.665 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; in_freq_anemometre ; in_freq_anemometre ; 1.000        ; 0.000      ; 0.367      ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                      ;
++-------+-----------------------------------------------+-----------------------------------------+--------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                 ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-----------------------------------------+--------------------+-------------+--------------+------------+------------+
+; 0.215 ; edge_detect:b2v_inst6|reset                   ; edge_detect:b2v_inst6|reset             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; edge_detect:b2v_inst6|etat[1]                 ; edge_detect:b2v_inst6|etat[1]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.288 ; choix_mode:b2v_inst4|tmp1[4]                  ; choix_mode:b2v_inst4|tmp[4]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.440      ;
+; 0.328 ; config[2]                                     ; start_stop_tmp                          ; clk                ; clk         ; 0.000        ; 0.000      ; 0.480      ;
+; 0.329 ; config[0]                                     ; raz_n_tmp                               ; clk                ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; config[1]                                     ; continu_tmp                             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.355 ; edge_detect:b2v_inst6|etat[1]                 ; edge_detect:b2v_inst6|reset             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.356 ; div_frq_1hz:b2v_inst1|cpt[24]                 ; div_frq_1hz:b2v_inst1|cpt[24]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; div_frq_1hz:b2v_inst1|cpt[10]                 ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; div_frq_1hz:b2v_inst1|cpt[11]                 ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; choix_mode:b2v_inst4|tmp1[6]                  ; choix_mode:b2v_inst4|tmp[6]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; div_frq_1hz:b2v_inst1|cpt[6]                  ; div_frq_1hz:b2v_inst1|cpt[6]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[8]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; choix_mode:b2v_inst4|tmp1[1]                  ; choix_mode:b2v_inst4|tmp[1]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; choix_mode:b2v_inst4|tmp1[7]                  ; choix_mode:b2v_inst4|tmp[7]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; div_frq_1hz:b2v_inst1|cpt[4]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[1]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; choix_mode:b2v_inst4|tmp1[5]                  ; choix_mode:b2v_inst4|tmp[5]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.366 ; div_frq_1hz:b2v_inst1|cpt[5]                  ; div_frq_1hz:b2v_inst1|cpt[5]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; div_frq_1hz:b2v_inst1|cpt[16]                 ; div_frq_1hz:b2v_inst1|cpt[16]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; div_frq_1hz:b2v_inst1|cpt[18]                 ; div_frq_1hz:b2v_inst1|cpt[18]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; div_frq_1hz:b2v_inst1|cpt[9]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; choix_mode:b2v_inst4|tmp1[2]                  ; choix_mode:b2v_inst4|tmp[2]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; div_frq_1hz:b2v_inst1|cpt[0]                  ; div_frq_1hz:b2v_inst1|cpt[0]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; choix_mode:b2v_inst4|tmp1[3]                  ; choix_mode:b2v_inst4|tmp[3]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.370 ; div_frq_1hz:b2v_inst1|cpt[3]                  ; div_frq_1hz:b2v_inst1|cpt[3]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; div_frq_1hz:b2v_inst1|cpt[2]                  ; div_frq_1hz:b2v_inst1|cpt[2]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; choix_mode:b2v_inst4|tmp1[0]                  ; choix_mode:b2v_inst4|tmp[0]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.370 ; edge_detect:b2v_inst6|reset                   ; edge_detect:b2v_inst6|etat[1]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.374 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[6]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.381 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[7]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.383 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[5]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.535      ;
+; 0.384 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; choix_mode:b2v_inst4|tmp[2]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.490      ;
+; 0.384 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; choix_mode:b2v_inst4|tmp1[3]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.490      ;
+; 0.384 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[1]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.536      ;
+; 0.385 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; choix_mode:b2v_inst4|tmp1[4]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.491      ;
+; 0.387 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; choix_mode:b2v_inst4|tmp1[2]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.493      ;
+; 0.387 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; choix_mode:b2v_inst4|tmp[3]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.493      ;
+; 0.387 ; choix_mode:b2v_inst4|tmp[7]                   ; choix_mode:b2v_inst4|data_anemometre[7] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.539      ;
+; 0.388 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; choix_mode:b2v_inst4|tmp[4]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.494      ;
+; 0.392 ; choix_mode:b2v_inst4|tmp[0]                   ; choix_mode:b2v_inst4|data_anemometre[0] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.544      ;
+; 0.402 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; choix_mode:b2v_inst4|tmp[0]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.508      ;
+; 0.408 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; choix_mode:b2v_inst4|tmp1[0]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.514      ;
+; 0.425 ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; choix_mode:b2v_inst4|tmp[7]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.531      ;
+; 0.433 ; choix_mode:b2v_inst4|tmp[3]                   ; choix_mode:b2v_inst4|data_anemometre[3] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.585      ;
+; 0.437 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; choix_mode:b2v_inst4|tmp[1]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.543      ;
+; 0.439 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; choix_mode:b2v_inst4|tmp[5]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.545      ;
+; 0.441 ; choix_mode:b2v_inst4|tmp[5]                   ; choix_mode:b2v_inst4|data_anemometre[5] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.593      ;
+; 0.445 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; choix_mode:b2v_inst4|tmp[6]             ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.551      ;
+; 0.449 ; choix_mode:b2v_inst4|tmp[4]                   ; choix_mode:b2v_inst4|data_anemometre[4] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.601      ;
+; 0.449 ; choix_mode:b2v_inst4|tmp[6]                   ; choix_mode:b2v_inst4|data_anemometre[6] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.601      ;
+; 0.456 ; choix_mode:b2v_inst4|tmp[2]                   ; choix_mode:b2v_inst4|data_anemometre[2] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.608      ;
+; 0.459 ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; choix_mode:b2v_inst4|tmp1[7]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.565      ;
+; 0.459 ; choix_mode:b2v_inst4|tmp[1]                   ; choix_mode:b2v_inst4|data_anemometre[1] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.611      ;
+; 0.475 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; choix_mode:b2v_inst4|tmp1[5]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.581      ;
+; 0.477 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; choix_mode:b2v_inst4|tmp1[1]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.583      ;
+; 0.477 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; choix_mode:b2v_inst4|tmp1[6]            ; in_freq_anemometre ; clk         ; 0.000        ; -0.046     ; 0.583      ;
+; 0.490 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[0]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.642      ;
+; 0.494 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[4]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.646      ;
+; 0.494 ; div_frq_1hz:b2v_inst1|cpt[10]                 ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.646      ;
+; 0.495 ; div_frq_1hz:b2v_inst1|cpt[7]                  ; div_frq_1hz:b2v_inst1|cpt[8]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[2]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.649      ;
+; 0.499 ; div_frq_1hz:b2v_inst1|cpt[15]                 ; div_frq_1hz:b2v_inst1|cpt[16]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[3]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.652      ;
+; 0.504 ; continu_tmp                                   ; choix_mode:b2v_inst4|tmp[2]             ; clk                ; clk         ; 0.000        ; 0.000      ; 0.656      ;
+; 0.506 ; div_frq_1hz:b2v_inst1|cpt[5]                  ; div_frq_1hz:b2v_inst1|cpt[6]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.658      ;
+; 0.507 ; div_frq_1hz:b2v_inst1|cpt[9]                  ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509 ; div_frq_1hz:b2v_inst1|cpt[0]                  ; div_frq_1hz:b2v_inst1|cpt[1]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.661      ;
+; 0.510 ; div_frq_1hz:b2v_inst1|cpt[3]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510 ; div_frq_1hz:b2v_inst1|cpt[2]                  ; div_frq_1hz:b2v_inst1|cpt[3]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[3] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.662      ;
+; 0.512 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[6] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.514 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[5] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[4] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.666      ;
+; 0.516 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[1] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.517 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_anemometre[2] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.669      ;
+; 0.518 ; continu_tmp                                   ; choix_mode:b2v_inst4|data_valid         ; clk                ; clk         ; 0.000        ; 0.000      ; 0.670      ;
+; 0.530 ; div_frq_1hz:b2v_inst1|cpt[7]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531 ; div_frq_1hz:b2v_inst1|cpt[6]                  ; div_frq_1hz:b2v_inst1|cpt[8]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.683      ;
+; 0.532 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[3]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.534 ; div_frq_1hz:b2v_inst1|clk_1hz                 ; div_frq_1hz:b2v_inst1|clk_1hz           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.686      ;
+; 0.535 ; div_frq_1hz:b2v_inst1|cpt[14]                 ; div_frq_1hz:b2v_inst1|cpt[16]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.687      ;
+; 0.542 ; div_frq_1hz:b2v_inst1|cpt[16]                 ; div_frq_1hz:b2v_inst1|cpt[18]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.694      ;
+; 0.542 ; div_frq_1hz:b2v_inst1|cpt[9]                  ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.694      ;
+; 0.544 ; div_frq_1hz:b2v_inst1|cpt[0]                  ; div_frq_1hz:b2v_inst1|cpt[2]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.696      ;
+; 0.545 ; div_frq_1hz:b2v_inst1|cpt[2]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.697      ;
+; 0.552 ; div_frq_1hz:b2v_inst1|cpt[4]                  ; div_frq_1hz:b2v_inst1|cpt[5]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.704      ;
+; 0.565 ; div_frq_1hz:b2v_inst1|cpt[7]                  ; div_frq_1hz:b2v_inst1|cpt[10]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.717      ;
+; 0.566 ; div_frq_1hz:b2v_inst1|cpt[6]                  ; div_frq_1hz:b2v_inst1|cpt[9]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.718      ;
+; 0.566 ; div_frq_1hz:b2v_inst1|cpt[8]                  ; div_frq_1hz:b2v_inst1|cpt[11]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567 ; div_frq_1hz:b2v_inst1|cpt[1]                  ; div_frq_1hz:b2v_inst1|cpt[4]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.719      ;
+; 0.569 ; div_frq_1hz:b2v_inst1|cpt[13]                 ; div_frq_1hz:b2v_inst1|cpt[16]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.721      ;
+; 0.569 ; div_frq_1hz:b2v_inst1|cpt[15]                 ; div_frq_1hz:b2v_inst1|cpt[18]           ; clk                ; clk         ; 0.000        ; 0.000      ; 0.721      ;
+; 0.576 ; div_frq_1hz:b2v_inst1|cpt[23]                 ; div_frq_1hz:b2v_inst1|cpt[24]           ; clk                ; clk         ; 0.000        ; 0.001      ; 0.729      ;
+; 0.576 ; div_frq_1hz:b2v_inst1|cpt[5]                  ; div_frq_1hz:b2v_inst1|cpt[8]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.728      ;
+; 0.579 ; div_frq_1hz:b2v_inst1|cpt[0]                  ; div_frq_1hz:b2v_inst1|cpt[3]            ; clk                ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_valid         ; clk                ; clk         ; 0.000        ; 0.000      ; 0.732      ;
+; 0.583 ; start_stop_tmp                                ; choix_mode:b2v_inst4|data_anemometre[2] ; clk                ; clk         ; 0.000        ; 0.000      ; 0.735      ;
++-------+-----------------------------------------------+-----------------------------------------+--------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'in_freq_anemometre'                                                                                                                                                    ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                       ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.215 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.393      ;
+; 0.358 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.512      ;
+; 0.369 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.521      ;
+; 0.375 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.527      ;
+; 0.442 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.594      ;
+; 0.493 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.645      ;
+; 0.497 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.650      ;
+; 0.509 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.661      ;
+; 0.515 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.667      ;
+; 0.528 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.680      ;
+; 0.532 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.684      ;
+; 0.533 ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.685      ;
+; 0.533 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.685      ;
+; 0.544 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.696      ;
+; 0.550 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.702      ;
+; 0.563 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.715      ;
+; 0.567 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.720      ;
+; 0.579 ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.731      ;
+; 0.580 ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.732      ;
+; 0.585 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.737      ;
+; 0.598 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.750      ;
+; 0.602 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.754      ;
+; 0.603 ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.755      ;
+; 0.620 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.772      ;
+; 0.633 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.785      ;
+; 0.637 ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.789      ;
+; 0.655 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.807      ;
+; 0.668 ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.820      ;
+; 0.690 ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; in_freq_anemometre ; in_freq_anemometre ; 0.000        ; 0.000      ; 0.842      ;
++-------+-----------------------------------------------+-----------------------------------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'in_freq_anemometre'                                                                                                                        ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                                       ; Launch Clock ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.096 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.982      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
+; 0.207 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 1.000        ; 0.046      ; 0.871      ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'in_freq_anemometre'                                                                                                                         ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                                       ; Launch Clock ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.673 ; raz_n_tmp                   ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.871      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
+; 0.784 ; edge_detect:b2v_inst6|reset ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ; clk          ; in_freq_anemometre ; 0.000        ; 0.046      ; 0.982      ;
++-------+-----------------------------+-----------------------------------------------+--------------+--------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                  ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_anemometre[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|data_valid         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|data_valid         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[5]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[6]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp1[7]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; choix_mode:b2v_inst4|tmp[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; config[0]                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; config[0]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; config[1]                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; config[1]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; config[2]                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; config[2]                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; continu_tmp                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; continu_tmp                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|clk_1hz           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|clk_1hz           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[10]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[11]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[12]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[12]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[13]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[13]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[14]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[14]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[15]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[15]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[16]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[16]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[17]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[17]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[18]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[18]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[19]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[19]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[20]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[20]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[21]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[21]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[22]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[22]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[23]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[23]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[24]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[24]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[25]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[25]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; div_frq_1hz:b2v_inst1|cpt[3]            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'in_freq_anemometre'                                                                                        ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock              ; Clock Edge ; Target                                        ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; in_freq_anemometre ; Rise       ; in_freq_anemometre                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; counter:b2v_inst|\p_asynchronous_reset:cpt[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[0]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[0]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[1]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[1]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[2]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[2]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[3]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[3]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[4]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[4]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[5]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[5]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[6]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[6]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[7]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; b2v_inst|\p_asynchronous_reset:cpt[7]|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; in_freq_anemometre ; Rise       ; in_freq_anemometre|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; in_freq_anemometre ; Rise       ; in_freq_anemometre|combout                    ;
++--------+--------------+----------------+------------------+--------------------+------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; chipselect    ; clk        ; 2.689 ; 2.689 ; Rise       ; clk             ;
+; reset_n       ; clk        ; 2.586 ; 2.586 ; Rise       ; clk             ;
+; write_n       ; clk        ; 2.648 ; 2.648 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; 2.003 ; 2.003 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; 1.950 ; 1.950 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; 1.975 ; 1.975 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; 2.003 ; 2.003 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; chipselect    ; clk        ; -2.569 ; -2.569 ; Rise       ; clk             ;
+; reset_n       ; clk        ; -2.466 ; -2.466 ; Rise       ; clk             ;
+; write_n       ; clk        ; -2.528 ; -2.528 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; -1.830 ; -1.830 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; -1.830 ; -1.830 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; -1.855 ; -1.855 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; -1.883 ; -1.883 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; internal_reset ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+; readdata[*]    ; clk        ; 4.418 ; 4.418 ; Rise       ; clk             ;
+;  readdata[0]   ; clk        ; 4.346 ; 4.346 ; Rise       ; clk             ;
+;  readdata[1]   ; clk        ; 3.945 ; 3.945 ; Rise       ; clk             ;
+;  readdata[2]   ; clk        ; 3.967 ; 3.967 ; Rise       ; clk             ;
+;  readdata[3]   ; clk        ; 3.931 ; 3.931 ; Rise       ; clk             ;
+;  readdata[4]   ; clk        ; 4.418 ; 4.418 ; Rise       ; clk             ;
+;  readdata[5]   ; clk        ; 3.927 ; 3.927 ; Rise       ; clk             ;
+;  readdata[6]   ; clk        ; 4.048 ; 4.048 ; Rise       ; clk             ;
+;  readdata[7]   ; clk        ; 4.139 ; 4.139 ; Rise       ; clk             ;
+;  readdata[9]   ; clk        ; 4.416 ; 4.416 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; internal_reset ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+; readdata[*]    ; clk        ; 3.927 ; 3.927 ; Rise       ; clk             ;
+;  readdata[0]   ; clk        ; 4.346 ; 4.346 ; Rise       ; clk             ;
+;  readdata[1]   ; clk        ; 3.945 ; 3.945 ; Rise       ; clk             ;
+;  readdata[2]   ; clk        ; 3.967 ; 3.967 ; Rise       ; clk             ;
+;  readdata[3]   ; clk        ; 3.931 ; 3.931 ; Rise       ; clk             ;
+;  readdata[4]   ; clk        ; 4.418 ; 4.418 ; Rise       ; clk             ;
+;  readdata[5]   ; clk        ; 3.927 ; 3.927 ; Rise       ; clk             ;
+;  readdata[6]   ; clk        ; 4.048 ; 4.048 ; Rise       ; clk             ;
+;  readdata[7]   ; clk        ; 4.139 ; 4.139 ; Rise       ; clk             ;
+;  readdata[9]   ; clk        ; 4.416 ; 4.416 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                               ;
++---------------------+----------+-------+----------+---------+---------------------+
+; Clock               ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack    ; -5.516   ; 0.215 ; -0.392   ; 0.673   ; -1.380              ;
+;  clk                ; -5.516   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  in_freq_anemometre ; -0.812   ; 0.215 ; -0.392   ; 0.673   ; -1.222              ;
+; Design-wide TNS     ; -128.917 ; 0.0   ; -3.136   ; 0.0     ; -70.602             ;
+;  clk                ; -125.040 ; 0.000 ; N/A      ; N/A     ; -61.380             ;
+;  in_freq_anemometre ; -3.877   ; 0.000 ; -3.136   ; 0.000   ; -9.222              ;
++---------------------+----------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; chipselect    ; clk        ; 5.055 ; 5.055 ; Rise       ; clk             ;
+; reset_n       ; clk        ; 4.774 ; 4.774 ; Rise       ; clk             ;
+; write_n       ; clk        ; 4.958 ; 4.958 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; 3.677 ; 3.677 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; 3.529 ; 3.529 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; 3.624 ; 3.624 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; 3.677 ; 3.677 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; chipselect    ; clk        ; -2.569 ; -2.569 ; Rise       ; clk             ;
+; reset_n       ; clk        ; -2.466 ; -2.466 ; Rise       ; clk             ;
+; write_n       ; clk        ; -2.528 ; -2.528 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; -1.830 ; -1.830 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; -1.830 ; -1.830 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; -1.855 ; -1.855 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; -1.883 ; -1.883 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; internal_reset ; clk        ; 6.691 ; 6.691 ; Rise       ; clk             ;
+; readdata[*]    ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
+;  readdata[0]   ; clk        ; 7.928 ; 7.928 ; Rise       ; clk             ;
+;  readdata[1]   ; clk        ; 7.013 ; 7.013 ; Rise       ; clk             ;
+;  readdata[2]   ; clk        ; 7.031 ; 7.031 ; Rise       ; clk             ;
+;  readdata[3]   ; clk        ; 6.994 ; 6.994 ; Rise       ; clk             ;
+;  readdata[4]   ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
+;  readdata[5]   ; clk        ; 6.989 ; 6.989 ; Rise       ; clk             ;
+;  readdata[6]   ; clk        ; 7.246 ; 7.246 ; Rise       ; clk             ;
+;  readdata[7]   ; clk        ; 7.530 ; 7.530 ; Rise       ; clk             ;
+;  readdata[9]   ; clk        ; 7.986 ; 7.986 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; internal_reset ; clk        ; 3.756 ; 3.756 ; Rise       ; clk             ;
+; readdata[*]    ; clk        ; 3.927 ; 3.927 ; Rise       ; clk             ;
+;  readdata[0]   ; clk        ; 4.346 ; 4.346 ; Rise       ; clk             ;
+;  readdata[1]   ; clk        ; 3.945 ; 3.945 ; Rise       ; clk             ;
+;  readdata[2]   ; clk        ; 3.967 ; 3.967 ; Rise       ; clk             ;
+;  readdata[3]   ; clk        ; 3.931 ; 3.931 ; Rise       ; clk             ;
+;  readdata[4]   ; clk        ; 4.418 ; 4.418 ; Rise       ; clk             ;
+;  readdata[5]   ; clk        ; 3.927 ; 3.927 ; Rise       ; clk             ;
+;  readdata[6]   ; clk        ; 4.048 ; 4.048 ; Rise       ; clk             ;
+;  readdata[7]   ; clk        ; 4.139 ; 4.139 ; Rise       ; clk             ;
+;  readdata[9]   ; clk        ; 4.416 ; 4.416 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Transfers                                                                     ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; clk                ; clk                ; 8836     ; 0        ; 0        ; 0        ;
+; in_freq_anemometre ; clk                ; 16       ; 0        ; 0        ; 0        ;
+; in_freq_anemometre ; in_freq_anemometre ; 36       ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------+
+; Hold Transfers                                                                      ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; clk                ; clk                ; 8836     ; 0        ; 0        ; 0        ;
+; in_freq_anemometre ; clk                ; 16       ; 0        ; 0        ; 0        ;
+; in_freq_anemometre ; in_freq_anemometre ; 36       ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Recovery Transfers                                                          ;
++------------+--------------------+----------+----------+----------+----------+
+; From Clock ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+--------------------+----------+----------+----------+----------+
+; clk        ; in_freq_anemometre ; 16       ; 0        ; 0        ; 0        ;
++------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------+
+; Removal Transfers                                                           ;
++------------+--------------------+----------+----------+----------+----------+
+; From Clock ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+--------------------+----------+----------+----------+----------+
+; clk        ; in_freq_anemometre ; 16       ; 0        ; 0        ; 0        ;
++------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 21    ; 21   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 05 11:32:08 2021
+Info: Command: quartus_sta gestion_anemometre -c gestion_anemometre
+Info: qsta_default_script.tcl version: #1
+Warning: Parallel compilation is not licensed and has been disabled
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'gestion_anemometre.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name in_freq_anemometre in_freq_anemometre
+    Info: create_clock -period 1.000 -name clk clk
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -5.516
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -5.516      -125.040 clk 
+    Info:    -0.812        -3.877 in_freq_anemometre 
+Info: Worst-case hold slack is 0.391
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.391         0.000 clk 
+    Info:     0.391         0.000 in_freq_anemometre 
+Info: Worst-case recovery slack is -0.392
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.392        -3.136 in_freq_anemometre 
+Info: Worst-case removal slack is 0.834
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.834         0.000 in_freq_anemometre 
+Info: Worst-case minimum pulse width slack is -1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.380       -61.380 clk 
+    Info:    -1.222        -9.222 in_freq_anemometre 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 33 output pins without output pin load capacitance assignment
+    Info: Pin "readdata[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[20]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[21]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[22]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[23]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[24]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[25]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[26]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[27]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[28]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[29]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[30]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[31]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "internal_reset" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.985
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.985       -32.451 clk 
+    Info:     0.190         0.000 in_freq_anemometre 
+Info: Worst-case hold slack is 0.215
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.215         0.000 clk 
+    Info:     0.215         0.000 in_freq_anemometre 
+Info: Worst-case recovery slack is 0.096
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.096         0.000 in_freq_anemometre 
+Info: Worst-case removal slack is 0.673
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.673         0.000 in_freq_anemometre 
+Info: Worst-case minimum pulse width slack is -1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.380       -61.380 clk 
+    Info:    -1.222        -9.222 in_freq_anemometre 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 265 megabytes
+    Info: Processing ended: Tue Oct 05 11:32:10 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

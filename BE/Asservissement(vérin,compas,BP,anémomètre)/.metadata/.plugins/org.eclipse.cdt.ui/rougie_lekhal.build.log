@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project rougie_lekhal ****
+
+make all 
+Info: Building ../rougie_lekhal_bsp/
+make --no-print-directory -C ../rougie_lekhal_bsp/
+[BSP build complete]
+[rougie_lekhal build complete]

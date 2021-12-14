@@ -1,0 +1,1 @@
+obj/LIGHTS.o: LIGHTS.c

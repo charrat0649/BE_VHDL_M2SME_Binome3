@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project lights11 ****
+
+make all 
+Info: Building ../lights11_bsp/
+make --no-print-directory -C ../lights11_bsp/
+[BSP build complete]
+[lights11 build complete]

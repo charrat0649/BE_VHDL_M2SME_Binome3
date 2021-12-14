@@ -1,0 +1,35 @@
+|Compteur
+clk => compteur[7].CLK
+clk => compteur[6].CLK
+clk => compteur[5].CLK
+clk => compteur[4].CLK
+clk => compteur[3].CLK
+clk => compteur[2].CLK
+clk => compteur[1].CLK
+clk => compteur[0].CLK
+in_freq => compteur~7.OUTPUTSELECT
+in_freq => compteur~6.OUTPUTSELECT
+in_freq => compteur~5.OUTPUTSELECT
+in_freq => compteur~4.OUTPUTSELECT
+in_freq => compteur~3.OUTPUTSELECT
+in_freq => compteur~2.OUTPUTSELECT
+in_freq => compteur~1.OUTPUTSELECT
+in_freq => compteur~0.OUTPUTSELECT
+raz => compteur~15.OUTPUTSELECT
+raz => compteur~14.OUTPUTSELECT
+raz => compteur~13.OUTPUTSELECT
+raz => compteur~12.OUTPUTSELECT
+raz => compteur~11.OUTPUTSELECT
+raz => compteur~10.OUTPUTSELECT
+raz => compteur~9.OUTPUTSELECT
+raz => compteur~8.OUTPUTSELECT
+q[0] <= compteur[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= compteur[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= compteur[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= compteur[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= compteur[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= compteur[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= compteur[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= compteur[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

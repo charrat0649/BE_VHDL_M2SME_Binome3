@@ -1,0 +1,28 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity counter is
+	port(
+		clk : in std_logic;
+		reset : in std_logic;
+		counter : out unsigned (7 downto 0));
+end counter;
+
+architecture arc of counter is
+	
+begin 
+	
+	process(clk, reset) is
+		variable cpt : unsigned (7 downto 0);
+	begin
+	if reset = '1' then
+      counter <= "00000000";
+      cpt := "00000000";
+	elsif rising_edge(clk) then
+      cpt := cpt + 1;
+      counter <= cpt ;
+      
+	end if;
+	end process p_asynchronous_reset;
+end arc;

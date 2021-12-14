@@ -1,0 +1,469 @@
+Archive member included because of file (symbol)
+
+../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+                              ../PWM2_bsp//obj/HAL/src/crt0.o (alt_load)
+../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+                              ../PWM2_bsp//obj/HAL/src/crt0.o (alt_main)
+../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+                              obj/hello_world_small.o (alt_putstr)
+../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../PWM2_bsp/\libhal_bsp.a(alt_main.o) (alt_sys_init)
+../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o) (altera_avalon_jtag_uart_write)
+../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../PWM2_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              ../PWM2_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                              ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_irq_init)
+c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                              ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o) (strlen)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x00004000         0x00000020
+onchip_memory2_0 0x00004020         0x00003e60
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../PWM2_bsp//obj/HAL/src/crt0.o
+                0x0000400c                exit = _exit
+LOAD obj/hello_world_small.o
+LOAD c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a
+LOAD c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+LOAD ../PWM2_bsp/\libhal_bsp.a
+END GROUP
+LOAD c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+                0x00004000                __alt_mem_onchip_memory2_0 = 0x4000
+
+.entry          0x00004000       0x20
+ *(.entry)
+ .entry         0x00004000       0x20 ../PWM2_bsp//obj/HAL/src/crt0.o
+                0x00004000                __reset
+                0x0000400c                _exit
+
+.exceptions     0x00004020        0x0
+                0x00004020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x00004020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ *(.exceptions.notirq.label)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ *(.exceptions.exit.label)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ *(.exceptions)
+                0x00004020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x00004020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x00004020      0x1cc
+                0x00004020                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00004020       0x3c ../PWM2_bsp//obj/HAL/src/crt0.o
+                0x00004020                _start
+ .text          0x0000405c       0x18 obj/hello_world_small.o
+                0x0000405c                main
+ .text          0x00004074       0x8c ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+                0x00004094                alt_load
+ .text          0x00004100       0x2c ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+                0x00004100                alt_main
+ .text          0x0000412c       0x38 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+                0x0000412c                alt_putstr
+ .text          0x00004164       0x24 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00004164                alt_sys_init
+                0x00004168                alt_irq_init
+ .text          0x00004188       0x34 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x00004188                altera_avalon_jtag_uart_write
+ .text          0x000041bc        0x4 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000041bc                alt_dcache_flush_all
+ .text          0x000041c0        0x4 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x000041c0                alt_icache_flush_all
+ .text          0x000041c4        0x8 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                0x000041c4                altera_nios2_irq_init
+ .text          0x000041cc       0x20 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x000041cc                strlen
+ *(.gnu.warning.*)
+ *(.fini)
+                0x000041ec                PROVIDE (__etext, ABSOLUTE (.))
+                0x000041ec                PROVIDE (_etext, ABSOLUTE (.))
+                0x000041ec                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x000041ec                . = ALIGN (0x4)
+                0x000041ec                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x000041ec                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x000041ec                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x000041ec                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x000041ec                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x000041ec                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x000041ec                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x000041ec                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x000041ec                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x000041ec                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x000041ec                . = ALIGN (0x4)
+
+.rodata         0x000041ec       0x18
+                0x000041ec                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x000041ec                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x000041ec       0x18 obj/hello_world_small.o
+ *(.rodata1)
+                0x00004204                . = ALIGN (0x4)
+                0x00004204                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x000041ec                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x00004204        0x4 load address 0x00004208
+                0x00004204                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x00004204                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00004204        0x0 ../PWM2_bsp//obj/HAL/src/crt0.o
+ .data          0x00004204        0x0 obj/hello_world_small.o
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x00004204        0x0 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .data          0x00004204        0x0 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x0000c204                _gp = ABSOLUTE ((. + 0x8000))
+                0x0000c204                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00004204        0x4 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00004204                jtag_uart_0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x00004208                . = ALIGN (0x4)
+                0x00004208                _edata = ABSOLUTE (.)
+                0x00004208                PROVIDE (edata, ABSOLUTE (.))
+                0x00004208                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x00004208                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x0000420c        0xc
+                0x0000420c                __bss_start = ABSOLUTE (.)
+                0x0000420c                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x0000420c                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x0000420c        0xc ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000420c                alt_argc
+                0x00004210                alt_argv
+                0x00004214                alt_envp
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x00004218                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x00004218                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00004218        0x0 ../PWM2_bsp//obj/HAL/src/crt0.o
+ .bss           0x00004218        0x0 obj/hello_world_small.o
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x00004218        0x0 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .bss           0x00004218        0x0 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ *(COMMON)
+                0x00004218                . = ALIGN (0x4)
+                0x00004218                __bss_end = ABSOLUTE (.)
+
+.onchip_memory2_0
+                0x00004218        0x0
+                0x00004218                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+ *(.onchip_memory2_0. onchip_memory2_0.*)
+                0x00004218                . = ALIGN (0x4)
+                0x00004218                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x00004218                _end = ABSOLUTE (.)
+                0x00004218                end = ABSOLUTE (.)
+                0x00004218                __alt_stack_base = ABSOLUTE (.)
+                0x00004218                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x26
+ *(.comment)
+ .comment       0x00000000       0x26 obj/hello_world_small.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x00000000       0x27 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .comment       0x00000000       0x27 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x168
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 ../PWM2_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x20 obj/hello_world_small.o
+ .debug_aranges
+                0x00000048       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000068       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000088       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_aranges
+                0x000000a8       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x000000c8       0x20 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x000000e8       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000108       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x00000128       0x20 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_aranges
+                0x00000148       0x20 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_pubnames
+                0x00000000      0x1b8
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x1b obj/hello_world_small.o
+ .debug_pubnames
+                0x0000001b       0x1f ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_pubnames
+                0x0000003a       0x46 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x00000080       0x21 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_pubnames
+                0x000000a1       0x44 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x000000e5       0x34 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_pubnames
+                0x00000119       0x2b ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_pubnames
+                0x00000144       0x2b ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_pubnames
+                0x0000016f       0x2c ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_pubnames
+                0x0000019b       0x1d c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_info     0x00000000      0x95c
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x8a ../PWM2_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000008a       0x45 obj/hello_world_small.o
+ .debug_info    0x000000cf      0x12e ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x000001fd      0x125 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000322       0xc5 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_info    0x000003e7      0x17d ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000564      0x18f ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x000006f3       0x8d ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000780       0x8d ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000080d       0x8d ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_info    0x0000089a       0xc2 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_abbrev   0x00000000      0x509
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x12 ../PWM2_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000012       0x34 obj/hello_world_small.o
+ .debug_abbrev  0x00000046       0x97 ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x000000dd       0xa6 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000183       0x7c ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_abbrev  0x000001ff       0xe3 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000002e2       0xf0 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x000003d2       0x3f ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000411       0x3f ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000450       0x3f ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_abbrev  0x0000048f       0x7a c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_line     0x00000000     0x14f4
+ *(.debug_line)
+ .debug_line    0x00000000       0x66 ../PWM2_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x00000066       0xdf obj/hello_world_small.o
+ .debug_line    0x00000145      0x217 ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000035c      0x2c2 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x0000061e      0x1d9 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_line    0x000007f7      0x286 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000a7d      0x2f4 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x00000d71      0x1b5 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000f26      0x1b5 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x000010db      0x1c9 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_line    0x000012a4      0x250 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_frame    0x00000000      0x188
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x28 obj/hello_world_small.o
+ .debug_frame   0x00000028       0x38 ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000060       0x28 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000088       0x28 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_frame   0x000000b0       0x38 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x000000e8       0x20 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000108       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000128       0x20 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000148       0x20 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+ .debug_frame   0x00000168       0x20 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_str      0x00000000      0x52d
+ *(.debug_str)
+ .debug_str     0x00000000       0x75 obj/hello_world_small.o
+                                 0x7a (size before relaxing)
+ .debug_str     0x00000075      0x19a ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+                                0x1df (size before relaxing)
+ .debug_str     0x0000020f       0x75 ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+                                0x163 (size before relaxing)
+ .debug_str     0x00000284       0x4c ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+                                0x13a (size before relaxing)
+ .debug_str     0x000002d0       0x85 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                0x1d8 (size before relaxing)
+ .debug_str     0x00000355       0x56 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                0x1db (size before relaxing)
+ .debug_str     0x000003ab       0x34 ../PWM2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                0x122 (size before relaxing)
+ .debug_str     0x000003df       0x34 ../PWM2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                0x122 (size before relaxing)
+ .debug_str     0x00000413       0x31 ../PWM2_bsp/\libhal_bsp.a(altera_nios2_irq.o)
+                                0x11f (size before relaxing)
+ .debug_str     0x00000444       0xe9 c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                                0x184 (size before relaxing)
+
+.debug_loc      0x00000000      0x11b
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x1f obj/hello_world_small.o
+ .debug_loc     0x0000001f       0x1f ../PWM2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_loc     0x0000003e       0x1f ../PWM2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_loc     0x0000005d       0x48 ../PWM2_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_loc     0x000000a5       0x32 ../PWM2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x000000d7       0x26 ../PWM2_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x000000fd       0x1e c:/altera/11.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x10 ../PWM2_bsp//obj/HAL/src/crt0.o
+                0x00007e80                __alt_data_end = 0x7e80
+                0x00007e80                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x00004218                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x00004218                PROVIDE (__alt_heap_start, end)
+                0x00007e80                PROVIDE (__alt_heap_limit, 0x7e80)
+OUTPUT(PWM2.elf elf32-littlenios2)
+
+.debug_ranges   0x00000000       0x20
+ .debug_ranges  0x00000000       0x20 ../PWM2_bsp//obj/HAL/src/crt0.o

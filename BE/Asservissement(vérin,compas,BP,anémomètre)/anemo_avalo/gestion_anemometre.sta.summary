@@ -1,0 +1,69 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -5.516
+TNS   : -125.040
+
+Type  : Slow Model Setup 'in_freq_anemometre'
+Slack : -0.812
+TNS   : -3.877
+
+Type  : Slow Model Hold 'clk'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'in_freq_anemometre'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'in_freq_anemometre'
+Slack : -0.392
+TNS   : -3.136
+
+Type  : Slow Model Removal 'in_freq_anemometre'
+Slack : 0.834
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -61.380
+
+Type  : Slow Model Minimum Pulse Width 'in_freq_anemometre'
+Slack : -1.222
+TNS   : -9.222
+
+Type  : Fast Model Setup 'clk'
+Slack : -1.985
+TNS   : -32.451
+
+Type  : Fast Model Setup 'in_freq_anemometre'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'in_freq_anemometre'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'in_freq_anemometre'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast Model Removal 'in_freq_anemometre'
+Slack : 0.673
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -61.380
+
+Type  : Fast Model Minimum Pulse Width 'in_freq_anemometre'
+Slack : -1.222
+TNS   : -9.222
+
+------------------------------------------------------------

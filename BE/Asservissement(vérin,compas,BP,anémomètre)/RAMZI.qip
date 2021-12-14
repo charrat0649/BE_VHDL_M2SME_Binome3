@@ -1,0 +1,36 @@
+# clk_0
+# cpu_0
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu_0.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu_0.ocp]
+# onchip_memory2_0
+# sysid
+# sortie
+# entree
+# jtag_uart_0
+# avalon_pwm_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) avalon_pwm_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_pwm.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_pwm_0.vhd]
+# gestion_anemometre_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) anemo_avalo/gestion_anemometre_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) anemo_avalo/gestion_anemometre.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) gestion_anemometre_0.vhd]
+# verin_test_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) Verin/verin_test_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) Verin/verin_test.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) verin_test_0.vhd]
+# avalon_compas_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) avalon_compas_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_compas.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_compas_0.vhd]
+# avalon_gestion_bp_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) avalon_gestion_bp_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_gestion_bp.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_gestion_bp_0.vhd]
+# null
+# avalon_txd_0
+set_global_assignment -name TCL_FILE E:/fichiers_vhd/avalon_txd_hw.tcl
+set_global_assignment -name VHDL_FILE E:/fichiers_vhd/avalon_txd.vhd
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_txd_0.vhd]
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 00000000000000E00000017D7F78AAAF 
+ 
